@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru" itemscope itemtype="http://schema.org/Person">
+<head>
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>Планирование изменений: балансировка ресурсов</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Константин Овчинников">
+
+  <link rel="shortcut icon" href="/theme/images/logo3.ico">
+
+  <!-- schema.org -->
+  <meta itemprop="name" content="Настоящие изменения">
+  <meta itemprop="image" content="/theme/images/logo3_small.png">
+  <meta itemprop="description" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Style Meta Data -->
+  <link rel="stylesheet" href="./theme/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css" />
+
+  <!-- Feed Meta Data -->
+    <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Настоящие изменения ATOM Feed" />
+
+  <!-- Twitter Feed -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="ikostas2">
+  <meta name="twitter:image" content="">
+
+<meta name="twitter:creator" content="ikostas2">
+<meta name="twitter:url" content="./2020-02-resourcebalance.html">
+<meta name="twitter:title" content="Настоящие изменения ~ Планирование изменений: балансировка ресурсов">
+<meta name="twitter:description" content="<p>Учёт ограниченных ресурсов при составлении плана-графика, работа с планом-графиком в специализированных инструментах</p>">
+
+<!-- Facebook Meta Data -->
+<meta property="og:title" content="Настоящие изменения ~ Планирование изменений: балансировка ресурсов" />
+<meta property="og:description" content="<p>Учёт ограниченных ресурсов при составлении плана-графика, работа с планом-графиком в специализированных инструментах</p>" />
+<meta property="og:image" content="" />
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <h1>Настоящие изменения</h1>
+      <p>Страница Константина Овчинникова</p>
+    <center><a href="."><img id="avatar" src="/theme/images/logo3_small.png"></a></center>
+
+    <nav class="nav">
+      <ul class="list-bare">
+      
+          <li><a class="nav__link" href="https://kovchinnikov.info">Блог</a></li>
+          <li><a class="nav__link" href="https://groups.google.com/forum/#!forum/realchanges/join">Подписаться на новости</a></li>
+          <li><a class="nav__link" href="https://news.google.com/publications/CAAqBwgKMNDclQsw0_6sAw?oc=3&ceid=RU:ru">Блог на Google News</a></li>
+          <li><a class="nav__link" href="https://www.youtube.com/channel/UCSWV-jXlrnxIMbAD-82_USg">Канал YouTube</a></li>
+          <li><a class="nav__link" href="https://groups.google.com/group/ikostas-haiku?hl=ru">Рассылка хокку</a></li>
+         
+          <li><a class="nav__link" href="./pages/main.html">Статьи и инструменты</a></li>
+         
+      </ul>
+    </nav>
+
+    <p class="social">
+
+        <a href="https://twitter.com/ikostas2" target="_blank" ><img style="vertical-align:middle" src="./theme/images/icons/twitter.png"></a>
+        <a href="https://facebook.com/bizrealchanges/" target="_blank" ><img style="vertical-align:middle" src="./theme/images/icons/facebook.png"></a>
+        <a href="http://ru.linkedin.com/pub/konstantin-ovchinnikov/1/b4b/710/" target="_blank" ><img style="vertical-align:middle" src="./theme/images/icons/linkedin.png"></a>
+      <a href="./feeds/all.atom.xml" rel="alternate">
+        <img style="vertical-align:middle" src="./theme/images/icons/rss.png"></a>
+    </p>
+
+  </aside>
+
+  <!-- Content -->
+  <article>
+<section id="content">
+    <article>
+        <h2 class="post_title post_detail"><a href="./2020-02-resourcebalance.html" rel="bookmark" title="Постоянная ссылка на Планирование изменений: балансировка ресурсов">Планирование изменений: балансировка ресурсов</a></h2>
+        <div class="entry-content blog-post">
+            <p>Вы <a href="2020-02-planning.html">составили план-график</a>, при этом вы даже смирились с тем, что инструмент планирования (такой как MS Project или GanttProject) показал вам совсем не те сроки, на которые вы рассчитывали. Ну что же, держитесь крепче, сейчас план-график будет сползать ещё дальше. Дело всё в том, что в рамках технологической последовательности работ две работы могли выполняться параллельно, но у вас для этих работ есть только один ресурс &ndash; будь то команда или сотрудник.</p>
+<div style="background-color: #F2F4F6"><strong><a href="https://groups.google.com/forum/#!forum/realchanges/join">Подписывайтесь на рассылку</a></strong>, чтобы раз в неделю получать информацию о новых записях в блоге, интересных ссылках по теме управления изменениями и анонсах мероприятий.</div>
+
+<p>Прежде чем мы продолжим, пара слов. Это не руководство по планированию, и вы не сможете получить корректный план-график по итогам чтения этой небольшой статьи. Но вы поймёте: чем занимается проектный менеджер, когда планирует проект или обновляет план-график по ходу реализации проекта, что он учитывает и что может не учесть, какие вопросы задать проектному менеджеру, чтобы понимать, что происходит. В целом навык планирования основывается целиком на практике, то есть составлении плана-графика, исполнении его, возврата к корректировке плана графика, новой попытке его исполнить и так далее. Если вы начинаете планировать первый раз, крайне рекомендуется, чтобы рядом был коллега, более опытный в этом деле, который мог бы вас проверить. Ошибка планирования исправляется в ходе реализации дороже всего.</p>
+<p>В целом всё очень просто: проставляем ресурсы по задачам, смотрим наложение ресурсов (больше 100% в единицу времени), расшиваем. Теперь о том, как это делать. Здесь есть несколько практических приёмов, которые сильно облегчат вам жизнь.</p>
+<p>Ресурсы в специализированных инструментах &ndash; это отдельный справочник, и надо бы сначала определиться с его составом, прежде чем указывать ресурсы в конкретных работах. Справочник, насколько мне известно, можно составить в трёх моделях:</p>
+<ol>
+<li>Ролевой &ndash; под обобщённые роли, например, руководитель проекта, бизнес-аналитик. Мы примерно прикидываем таким образом, кто нам нужен &ndash; каждая роль обладает набором компетенций и производительностью. Но все ресурсы нужно создать отдельно, например: бизнес-аналитик-1, бизнес-аналитик-2. Это немного запутывает, особенно если выбрать такие же странные названия, как у меня.</li>
+<li>Групповой &ndash; работы планируются на группу, например, направление на проекте (техническое, функциональное). То есть одна строка в таблице ресурсов &ndash; это целая группа людей с набором компетенций и средней производительностью. Разновидность этого подхода &ndash; указывать руководителя группы в качестве ресурса, а он там сам как-то распределяет задачи.</li>
+<li>Индивидуальный &ndash; в этом случае можно учесть, что Колян работает как два средних бизнес-аналитика, а вот Антон выступает единицей производительности в 10% от средней. Вроде минус в том, что надо знать заранее, кто у вас есть в команде. Но есть и второй не очевидный минус &ndash; если Колян заболел, а вместо него работает хотя бы Лёха (со средней производительностью), весь план придётся переделывать.</li>
+</ol>
+<p>Стандартный подход &ndash; сделать ресурсы по ролям, а уже ближе к делу распределить на конкретных людей. У людей есть ещё много замечательных качеств, помимо производительности. Например, ответственность: если вы видите, что на критическом пути проекта задачи Антона, и последнее время Антон даже на 10% стабильно не выходит, возможно, нужно переставить людей внутри команды. Но увидите вы это, когда расставите ресурсы на работы, и увидите постоянную нагрузку на какой-то ресурс без запаса &ndash; так вот, под работы этого ресурса и надо ставить более ответственного сотрудника.</p>
+<p>Казалось бы, простая задача: расставить ресурсы на работы, ведь время работ вы прикинули на предыдущем шаги, верно? Но вот вопросы, о которых стоит подумать:</p>
+<ol>
+<li>Достаточно ли одного человека, чтобы выполнить эту работу? Например, бизнес-аналитик готовит документ, но руководитель направления его проверяет перед тем, как показать бизнес-заказчику. Значит, руководитель направления тоже участвует в этой работе.</li>
+<li>Загрузка ресурсов 100% или меньше в течение всей работы? Например, для подготовки первой версии документа бизнес-аналитик загружен на 100%, но если вы не выделяете согласование и доработку документа в качестве отдельных работ, то на этих стадиях у него будет загрузка 20-50%, таким образом, средняя нагрузка будет 70-80%. Дальше, руководитель направления будет проверять документ &ndash; его времени потребуется 5%, оно ведь считается от общей длительности задачи. Специализированные инструменты (те же MS Project, GanttProject) позволяют указать загрузку ресурса по конкретной работе.</li>
+<li>Изменится ли время работы в зависимости от назначенных на неё ресурсов? Назначение ресурсов &ndash; это ещё один повод представить, кто и как будет выполнять эту работу, и скорректировать оценки.</li>
+</ol>
+<p>Какой шаг использовать при расчёте загрузки ресурсов? Опять же рекомендую подход сверху вниз: если можете, используйте месяц, далее две недели, неделю, день, далее 4 часа. Проектный план с длительностью задачи менее дня &ndash; уже странно, меньше 4-х часов &ndash; невероятно. Тут есть разница между рабочими днями и календарными: вы планируете в рабочих днях, а инструмент вам пересчитывает в календарные, и это крайне полезно. Также можно задать свой календарь праздников, но с этим мало кто заморачивается. Если про Новый год ещё помнят, то про другие праздники можно легко забыть, в итоге много раз видел сдвиг сроков исключительно по этой причине (в команде с европейцами не забудьте про Пасху). У вас ещё не болит голова? Тогда вспомните про плановый отпуск, а ещё есть болезни и другие внештатные обстоятельства, но с ними вы будете разбираться уже по месту. А вот на время планового отпуска нужно понять: либо задач по ресурсу на это время нет, либо его кто-то будет заменять.</p>
+<p>И вот в итоге мы открыли график загрузки ресурсов и видим загрузку 400-800%. Если это группа из 4-8 человек, то это нормально, иначе надо смотреть пересечения и устранять их, разносить работы по разным временным промежуткам. Очень часто все хотят быстрее, и тут есть один непреложный закон: 9 проектных менеджеров не родят за месяц ребёнка. В такой грубой форме сказано, что отсутствие компетенций не закроется количеством ресурсов. Но даже если у вас есть масса ресурсов подходящей компетенции, вы столкнётесь с более мягкой, но от этого не менее суровой формулировкой того же правила: с определённого момента добавление ресурсов не ускоряет, а замедляет выполнение работы (см. Фредерик Брукс, "Серебряной пули нет").</p>
+<p>На этом сложности не заканчиваются, но введение в балансировку ресурсов вполне можно завершить. Наверное, вы обратили внимание на то, что я пишу не о задачах, а о работах. Разница в том, что работу могут выполнять несколько людей, а вот у задачи должен быть один и только один ответственный. Задачи вроде бы имеют много общего с работами, а именно: ресурс, длительность, зависимость от других ресурсов / задач. Но при переходе на уровень задачи нужно учитывать ещё ряд факторов: приоритет, характер задачи, местоположение. Думаю, мы к этому вернёмся в следующих записях.</p>
+        </div>
+        <div class="post_list">
+            <a href="./author/konstantin-ovchinnikov.html">@Константин Овчинников</a> 
+            <span class="post_date">Сб 15 февраля 2020</span>
+            <div><span>Теги: </span>
+                <span><a href="./tag/upravlenie-izmeneniiami.html">#управление изменениями </a></span>
+                <span><a href="./tag/planirovanie-proekta.html">#планирование проекта </a></span>
+                <span><a href="./tag/planirovanie-izmenenii.html">#планирование изменений </a></span>
+                <span><a href="./tag/plan-grafik.html">#план-график </a></span>
+                <span><a href="./tag/planirovanie-resursov.html">#планирование ресурсов </a></span>
+                <span><a href="./tag/instrumenty.html">#инструменты </a></span>
+            </div>
+
+            <div class="entry-social">
+                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=./2020-02-resourcebalance.html&text=Планирование изменений: балансировка ресурсов&via=ikostas2"><img src="./theme/images/icons/twitter-s.png"></a></span>
+                
+		<span class="facebook"><a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=./2020-02-resourcebalance.html&t=Планирование изменений: балансировка ресурсов"><img src="./theme/images/icons/facebook-s.png"></a></span>
+
+                <a  target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=./2020-02-resourcebalance.html&title=Планирование изменений: балансировка ресурсов" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="./theme/images/icons/linkedin-s.png"></a>
+
+                <span class="mail"><a href="mailto:?subject=Планирование изменений: балансировка ресурсов&amp;body=Статья [Планирование изменений: балансировка ресурсов]. ./2020-02-resourcebalance.html" title="Отправить по почте" target="_blank"><img src="./theme/images/icons/mail-s.png"></a></span>
+            </div>
+        </div>
+        <div class="comments">
+            <h2>Комментарии</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+            var disqus_identifier = "2020-02-resourcebalance.html";
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://realchanges.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] ||
+                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+        </div>
+    </article>
+</section>
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Создано с помощью генератора статических сайтов <a href="http://getpelican.com/">Pelican</a>, 
+      тема <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> от <a href="https://parbhatpuri.com/">@parbhat</a>. РФ 12+.
+    </p>
+  </footer>
+
+  <!-- Analytics -->
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44909202-3']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+
+</body>
+</html>
