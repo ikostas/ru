@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/</loc>
-<lastmod>2020-05-28T00:19:23-00:00</lastmod>
+<lastmod>2020-05-28T15:26:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/tags.html</loc>
-<lastmod>2020-05-28T00:19:23-00:00</lastmod>
+<lastmod>2020-05-28T15:26:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/categories.html</loc>
-<lastmod>2020-05-28T00:19:23-00:00</lastmod>
+<lastmod>2020-05-28T15:26:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/authors.html</loc>
-<lastmod>2020-05-28T00:19:23-00:00</lastmod>
+<lastmod>2020-05-28T15:26:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/archives.html</loc>
-<lastmod>2020-05-28T00:19:23-00:00</lastmod>
+<lastmod>2020-05-28T15:26:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -41,6 +41,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/pages/main.html</loc>
 <lastmod>2020-01-11T11:39:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/2020-05-decisions.html</loc>
+<lastmod>2020-05-28T08:23:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -278,7 +285,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/category/blog.html</loc>
-<lastmod>2020-05-27T22:56:00+02:30</lastmod>
+<lastmod>2020-05-28T08:23:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -376,7 +383,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/tag/upravlenie-izmeneniiami.html</loc>
-<lastmod>2020-05-27T22:56:00+02:30</lastmod>
+<lastmod>2020-05-28T08:23:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -473,6 +480,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://kovchinnikov.info/tag/priniatie-reshenii.html</loc>
+<lastmod>2020-05-28T08:23:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://kovchinnikov.info/tag/youtube.html</loc>
 <lastmod>2020-02-12T21:23:00+02:30</lastmod>
 <changefreq>daily</changefreq>
@@ -516,7 +530,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/author/konstantin-ovchinnikov.html</loc>
-<lastmod>2020-05-27T22:56:00+02:30</lastmod>
+<lastmod>2020-05-28T08:23:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
