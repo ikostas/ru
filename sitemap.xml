@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/</loc>
-<lastmod>2020-06-11T23:21:09-00:00</lastmod>
+<lastmod>2020-06-11T23:28:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/tags.html</loc>
-<lastmod>2020-06-11T23:21:09-00:00</lastmod>
+<lastmod>2020-06-11T23:28:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/categories.html</loc>
-<lastmod>2020-06-11T23:21:09-00:00</lastmod>
+<lastmod>2020-06-11T23:28:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/authors.html</loc>
-<lastmod>2020-06-11T23:21:09-00:00</lastmod>
+<lastmod>2020-06-11T23:28:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/archives.html</loc>
-<lastmod>2020-06-11T23:21:09-00:00</lastmod>
+<lastmod>2020-06-11T23:28:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -327,7 +327,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/tag/komanda.html</loc>
-<lastmod>2020-04-08T23:28:00+02:30</lastmod>
+<lastmod>2020-06-11T23:12:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -390,7 +390,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/tag/upravlenie-izmeneniiami.html</loc>
-<lastmod>2020-06-11T23:12:00+02:30</lastmod>
+<lastmod>2020-05-28T08:23:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -516,7 +516,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/tag/dnevnik.html</loc>
-<lastmod>2020-06-11T23:12:00+02:30</lastmod>
+<lastmod>2020-01-12T21:25:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
