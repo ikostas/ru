@@ -140,7 +140,6 @@ aside > h2 {
 
 .social
 {
-  display: inline-block;
   margin-top: 10px;
 }
 
@@ -235,15 +234,13 @@ footer
 img {
   max-width: 100%;
   display:inline;
-  float:left;
-  margin:5px 15px 5px 0;
-}
-
-#avatar 
-{ 
-  display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+img#avatar 
+{ 
+  display: block;
 }
 
 a.subscribe {
