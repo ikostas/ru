@@ -188,6 +188,18 @@ a.sitetitle
   border-bottom: 1px solid #328cc7;
 }
 
+img {
+  max-width: 100%;
+  display:inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img#avatar 
+{ 
+  display: block;
+}
+
 
 /*--------Responsive------------*/
 
@@ -289,13 +301,4 @@ li.tag-3 {
 
 li.tag-4 {
     font-size: 80%;
-}
-
-
-
-/* ... add li.tag-3 etc, as much as needed */
-
-ul.tagcloud .list-group-item span.badge {
-    background-color: grey;
-    color: white;
 }
