@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/</loc>
-<lastmod>2020-12-08T14:28:21-00:00</lastmod>
+<lastmod>2020-12-19T11:07:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/tags.html</loc>
-<lastmod>2020-12-08T14:28:21-00:00</lastmod>
+<lastmod>2020-12-19T11:07:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/categories.html</loc>
-<lastmod>2020-12-08T14:28:21-00:00</lastmod>
+<lastmod>2020-12-19T11:07:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/authors.html</loc>
-<lastmod>2020-12-08T14:28:21-00:00</lastmod>
+<lastmod>2020-12-19T11:07:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/archives.html</loc>
-<lastmod>2020-12-08T14:28:21-00:00</lastmod>
+<lastmod>2020-12-19T11:07:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -41,6 +41,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/pages/main.html</loc>
 <lastmod>2020-01-11T11:39:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/2020-12-dog.html</loc>
+<lastmod>2020-12-19T10:35:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -355,7 +362,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/category/blog.html</loc>
-<lastmod>2020-12-08T07:00:00+02:30</lastmod>
+<lastmod>2020-12-19T10:35:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -634,6 +641,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://kovchinnikov.info/tag/sobaki.html</loc>
+<lastmod>2020-12-19T10:35:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://kovchinnikov.info/tag/dnevnik.html</loc>
 <lastmod>2020-01-12T21:25:00+02:30</lastmod>
 <changefreq>daily</changefreq>
@@ -656,7 +670,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/author/konstantin-ovchinnikov.html</loc>
-<lastmod>2020-12-08T07:00:00+02:30</lastmod>
+<lastmod>2020-12-19T10:35:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
