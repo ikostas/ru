@@ -12,12 +12,6 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
-#avatar 
-{ 
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .title
 {
@@ -243,6 +237,13 @@ img {
   display:inline;
   float:left;
   margin:5px 15px 5px 0;
+}
+
+#avatar 
+{ 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a.subscribe {
