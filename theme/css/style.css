@@ -77,7 +77,7 @@ p.post_entry {
 }
 article > header {
   list-style-type: none;
-  padding: 0px 10px;
+/*  padding: 0px 10px; */
   box-shadow: 0 0 0 2px #1DAEDF;
   -moz-border-radius: 5px 0;
   -webkit-border-radius: 5px 0;
@@ -91,14 +91,15 @@ article > header {
 }
 .post_list {
   list-style-type: none;
-  padding: 10px 10px;
   -moz-border-radius: 5px 0;
   -webkit-border-radius: 5px 0;
   border-radius: 5px 5px;
   background-color: white;
    
 }
-
+h2.post_header {
+  padding-top: 20px
+}
 
 /* Links */;
 a  { color:#1DAEDF; text-decoration:none; }
