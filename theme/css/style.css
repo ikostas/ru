@@ -38,8 +38,8 @@ h1, h2 {
 .entry-content
 {
   margin-top: 50px;
-  margin-bottom: 50px;
-  padding-bottom: 3em;
+  margin-bottom: 10px;
+  padding-bottom: 1em;
   text-align: left;
   color: #333;
   line-height: 1.7em;
@@ -230,7 +230,7 @@ img#avatar
 
    .entry-content
   {
-    padding-bottom: 3em;
+    padding-bottom: 1em;
     text-align: left;
     line-height: 1.7em;
   }
