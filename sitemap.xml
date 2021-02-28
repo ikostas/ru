@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/</loc>
-<lastmod>2021-02-23T14:35:08-00:00</lastmod>
+<lastmod>2021-02-28T12:45:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -13,6 +13,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/pages/main.html</loc>
 <lastmod>2020-01-11T11:39:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/2021-02-ftp.html</loc>
+<lastmod>2021-02-28T11:33:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -397,7 +404,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/category/blog.html</loc>
-<lastmod>2021-02-18T21:46:00+02:30</lastmod>
+<lastmod>2021-02-28T11:33:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/tag/linux.html</loc>
+<lastmod>2021-02-28T11:33:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/tag/produktivnost.html</loc>
+<lastmod>2021-02-28T11:33:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -412,13 +433,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/tag/upravlenie-proektom.html</loc>
 <lastmod>2021-01-27T22:38:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kovchinnikov.info/tag/produktivnost.html</loc>
-<lastmod>2021-01-25T22:56:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -606,13 +620,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://kovchinnikov.info/tag/linux.html</loc>
-<lastmod>2020-02-20T22:10:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://kovchinnikov.info/tag/planirovanie-proekta.html</loc>
 <lastmod>2020-02-15T19:14:00+02:30</lastmod>
 <changefreq>daily</changefreq>
@@ -677,7 +684,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/author/konstantin-ovchinnikov.html</loc>
-<lastmod>2021-02-18T21:46:00+02:30</lastmod>
+<lastmod>2021-02-28T11:33:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
