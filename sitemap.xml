@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/</loc>
-<lastmod>2021-03-31T07:24:00-00:00</lastmod>
+<lastmod>2021-03-31T23:41:04-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -13,6 +13,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/pages/main.html</loc>
 <lastmod>2020-01-11T11:39:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/2021-03-bitrix24.html</loc>
+<lastmod>2021-03-31T23:10:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -439,14 +446,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/category/blog.html</loc>
-<lastmod>2021-03-30T21:10:00+02:30</lastmod>
+<lastmod>2021-03-31T23:10:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/tag/produktivnost.html</loc>
-<lastmod>2021-03-30T21:10:00+02:30</lastmod>
+<lastmod>2021-03-31T23:10:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/tag/upravlenie-zadachami.html</loc>
+<lastmod>2021-03-31T23:10:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/tag/upravlenie-proektom.html</loc>
+<lastmod>2021-03-31T23:10:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/tag/oblaka.html</loc>
+<lastmod>2021-03-31T23:10:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/tag/nko.html</loc>
+<lastmod>2021-03-31T23:10:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/tag/volontiorstvo.html</loc>
+<lastmod>2021-03-31T23:10:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -482,13 +524,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/tag/upravlenie-izmeneniiami.html</loc>
 <lastmod>2021-03-08T19:38:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kovchinnikov.info/tag/upravlenie-proektom.html</loc>
-<lastmod>2021-01-27T22:38:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -544,20 +579,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/tag/strategiia.html</loc>
-<lastmod>2020-07-24T20:44:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kovchinnikov.info/tag/nko.html</loc>
-<lastmod>2020-07-24T20:44:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kovchinnikov.info/tag/volontiorstvo.html</loc>
 <lastmod>2020-07-24T20:44:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -627,13 +648,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://kovchinnikov.info/tag/upravlenie-zadachami.html</loc>
-<lastmod>2020-03-11T12:08:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://kovchinnikov.info/tag/modelirovanie.html</loc>
 <lastmod>2020-03-02T21:33:00+02:30</lastmod>
 <changefreq>daily</changefreq>
@@ -642,13 +656,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/tag/instrumenty.html</loc>
-<lastmod>2020-02-24T21:10:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kovchinnikov.info/tag/oblaka.html</loc>
 <lastmod>2020-02-24T21:10:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -719,7 +726,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/author/konstantin-ovchinnikov.html</loc>
-<lastmod>2021-03-30T21:10:00+02:30</lastmod>
+<lastmod>2021-03-31T23:10:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
