@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/</loc>
-<lastmod>2021-04-16T00:06:46-00:00</lastmod>
+<lastmod>2021-04-21T19:49:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -13,6 +13,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/pages/main.html</loc>
 <lastmod>2020-01-11T11:39:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/2021-04-makermanager.html</loc>
+<lastmod>2021-04-20T19:40:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -460,14 +467,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/category/blog.html</loc>
-<lastmod>2021-04-14T23:34:00+02:30</lastmod>
+<lastmod>2021-04-20T19:40:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/tag/produktivnost.html</loc>
-<lastmod>2021-04-14T23:34:00+02:30</lastmod>
+<lastmod>2021-04-20T19:40:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -740,7 +747,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/author/konstantin-ovchinnikov.html</loc>
-<lastmod>2021-04-14T23:34:00+02:30</lastmod>
+<lastmod>2021-04-20T19:40:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
