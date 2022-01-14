@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/</loc>
-<lastmod>2022-01-13T23:43:09-00:00</lastmod>
+<lastmod>2022-01-14T12:47:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -648,6 +648,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://kovchinnikov.info/tag/moto.html</loc>
+<lastmod>2022-01-13T22:16:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://kovchinnikov.info/tag/digital.html</loc>
 <lastmod>2022-01-09T13:49:00+02:30</lastmod>
 <changefreq>daily</changefreq>
@@ -832,13 +839,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/tag/psikhologiia.html</loc>
 <lastmod>2020-12-08T07:00:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kovchinnikov.info/tag/moto.html</loc>
-<lastmod>2020-07-16T21:15:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
