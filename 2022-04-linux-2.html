@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ru" itemscope itemtype="http://schema.org/Person">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>Linux на работе: проблемы и тюнинг</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Константин Овчинников">
+
+        <link rel="shortcut icon" href="/theme/images/logo3.ico">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Настоящие изменения">
+        <meta itemprop="image" content="/theme/images/logo3_small.png">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Настоящие изменения ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="ikostas2">
+        <meta name="twitter:image" content="">
+
+
+    <meta name="twitter:creator" content="ikostas2">
+    <meta name="twitter:url" content="./2022-04-linux-2.html">
+    <meta name="twitter:title" content="Настоящие изменения ~ Linux на работе: проблемы и тюнинг">
+    <meta name="twitter:description" content="Полная перепись того, что не работает и что желательно донастроить">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Настоящие изменения ~ Linux на работе: проблемы и тюнинг"/>
+    <meta property="og:description" content="Полная перепись того, что не работает и что желательно донастроить"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <h1><a class="sitetitle" href=".">Настоящие изменения</a></h1>
+        <p>Страница Константина Овчинникова</p>
+		<p>
+        <a href="."><img alt="Home" id="avatar" src="/theme/images/logo3_small.png"></a>
+    <!-- Site search -->
+<script async src="https://cse.google.com/cse.js?cx=83e5897c79a72ea3d"></script>
+<div class="gcse-search"></div>
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+                <li><a class="nav__link" href="https://kovchinnikov.info">Блог</a></li>
+                <li><a class="nav__link" href="https://kovchinnikov.info/tags.html">Темы записей блога</a></li>
+
+                <li><a class="nav__link" href="./pages/main.html">Статьи и инструменты</a></li>
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/ikostas2" target="_blank"><img alt="Twitter"
+                        src="./theme/images/icons/twitter.png"></a>
+                <a href="https://facebook.com/bizrealchanges/" target="_blank"><img alt="Facebook"
+                        src="./theme/images/icons/facebook.png"></a>
+                <a href="https://www.linkedin.com/in/konstantinovchinnikov/" target="_blank"><img alt="LinkedIn"
+                        src="./theme/images/icons/linkedin.png"></a>
+                <a href="https://www.youtube.com/channel/UCSWV-jXlrnxIMbAD-82_USg" target="_blank"><img alt="YouTube"
+                        src="./theme/images/icons/youtube.png"></a>
+                <a href="https://news.google.com/publications/CAAqBwgKMNDclQsw0_6sAw?oc=3&ceid=RU:ru" target="_blank"><img alt="GoogleNews"
+                        src="./theme/images/icons/googlenews.png"></a>
+                <a href="https://github.com/ikostas/" target="_blank"><img alt="GitHub"
+                        src="./theme/images/icons/github.png"></a>
+            <a href="./feeds/all.atom.xml" rel="alternate">
+                <img alt="RSS" src="./theme/images/icons/rss.png"></a>
+    </p>
+
+
+
+</aside>
+
+<!-- Content -->
+<article>
+
+    <section id="content">
+        <article>
+<!--End mc_embed_signup-->
+
+            <h2 class="post_title post_detail"><a href="./2022-04-linux-2.html" rel="bookmark" title="Permalink to Linux на работе: проблемы и тюнинг">Linux на работе: проблемы и тюнинг</a></h2>
+            <div class="entry-content blog-post">
+                <p>В этой части расскажу о том, что не работает, и о том небольшом тюнинге, который крайне желательно сделать. Поскольку описывать не так уж много, приведу полные рецепты того, как всё сделать, хотя можно найти самому поиском. Речь пойдёт о следующем:</p>
+<ul>
+<li>Тачпад</li>
+<li>Яркость экрана</li>
+<li>Сканер отпечатков пальцев</li>
+<li>Наушники</li>
+<li>Gnome vanilla</li>
+<li>Telegram и LibreOffice</li>
+</ul>
+<h3>Тачпад</h3>
+<p>Работал какое-то время, может быть даже несколько недель, и тут меня стал занимать вопрос: а как работает правая кнопка мыши на тачпаде? Долго мучился и тыкал в правый нижний угол, нажимал двумя пальцами, чтобы не искать правильный ответ: нужно поставить один палец на тачпад и нажать другим. Ничего необычного с точки зрения привычки, просто как-то не ожидаешь, что здесь что-то может быть по-другому.</p>
+<h3>Яркость экрана</h3>
+<p>Проблема в том, что после всё перезагрузки яркость выставляется на максимум. При этом яркость регулируется стандартными кнопками. Натыкаешься на <a href="https://www.quora.com/How-can-I-fix-ubuntu-brightness-getting-reset-to-max-after-restart-problem">первый рецепт</a>, с изменением параметров загрузки в /etc/default/grub и... яркость нормальная после перезагрузки, но не регулируется кнопками. Берём другой рецепт по той же ссылке:</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install xbacklight
+</code></pre></div>
+
+<p>Нажимаем Alt-F2, вводим gnome-session-properties, добавляем новый пункт с командой</p>
+<div class="highlight"><pre><span></span><code>xbacklight -set 25
+</code></pre></div>
+
+<p>Вроде работает, фух.</p>
+<h3>Сканер отпечатков пальцев</h3>
+<p>Сканер отпечатков пальцев буквально неделю назад заработал после очередного обновления, но есть нюанс. В систему можно войти после перезагрузки через отпечаток пальца, но связка ключей (keyring, хранит пароли) не будет разблокирована в этом случае, и вы получите 2 окна с требованием ввести один и тот же пароль. В остальном работа сканера отпечатка пальцев полностью зависит от качества железа, на рабочем ноуте всё работает просто отлично, на домашнем примерно никак.</p>
+<h3>Наушники</h3>
+<p>Не знаю, связано ли это с тем, что в Ubuntu 20.04 звуковая система pulseaudio, а не pipewire (с которой у меня таких проблем не было). В общем, если компьютер перезагружается и наушники подключены к ноутбуку, то звук в наушники не идёт. Нужно вынуть и воткнуть заново, но тут надо помнить, что во время звонка (когда и обнаруживаешь, что звук не работает), надо отключить микрофон. Если этого не сделать, то во время перетыкания твоих наушников с микрофоном все участники звонка получат неслабый удар звуком по ушам. Даже не пробовал пока это починить, просто жду выхода новой версии LTS 22.04, в которой, возможно, этой проблемы нет.</p>
+<h3>Gnome vanilla</h3>
+<p>В Ubuntu LTS 20.04 можно наслаждаться Gnome 3, Gnome 4 нельзя поставить никак; с этим можно только смириться.</p>
+<p>В чём проблема с Unity + X, на мой взгляд:</p>
+<ul>
+<li>панель слева съедает место и не вписывается в интерфейс</li>
+<li>её невозможно сделать внизу</li>
+<li>в целом мне не очень нравится история с авто-появлением, я предпочитаю кнопку Win</li>
+</ul>
+<p>Один из способов всё это исправить &ndash; перейти на Vanilla Gnome: тут ничего особенного, находим <a href="https://linuxconfig.org/how-to-install-gnome-on-ubuntu-20-04-lts-focal-fossa">инструкцию</a>, я выбрал </p>
+<div class="highlight"><pre><span></span><code>sudo apt install gnome-session gdm3
+</code></pre></div>
+
+<p>После перезагрузки нажимаем на колёсико и выбираем Gnome + Wayland. </p>
+<p>Чтобы сделать лёгкий тюнинг, нам понадобятся расширения. А расширения легче всего установить с сайта <a href="https://extensions.gnome.org/">Gnome Extensions</a>. Здесь всё очень продумано:</p>
+<ol>
+<li>Просто заходишь на сайт, сайт предлагает установить расширение Gnome Shell Extensions для браузера.</li>
+<li>После установки расширения находишь нужное расширение, там будет переключатель On/Off, включаем.</li>
+<li>Соглашаемся с установкой.</li>
+</ol>
+<p>Параметры расширений можно менять в приложении Extensions или на закладке Extension в Gnome Tweaks; там же можно отключить ненужные расширения. </p>
+<h3>Telegram и LibreOffice</h3>
+<p>Тут я не был курсе, что Snap уже закопали, поэтому первым делом установил Telegram из него, версии 3.4. Пару раз при использовании Telegram всё замораживалось намертво. Как им удалось это сделать &ndash; понятия не имею. ОК, удалил Telegram из Snap, поставил из стандартного репозитория. Версия оказалась 3.1, части функционала не хватало. И тут я понял, что все уже перешли на flatpak.</p>
+<p>Но при попытке установить Telegram из flatpak оказалось, что нужно обновить версию flatpak. А для этого нужно подключить внешний PPA, например, как описано <a href="https://linuxways.net/ubuntu/how-to-install-and-use-flatpak-on-ubuntu-20-04/">здесь</a>:</p>
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:alexlarsson/flatpak
+</code></pre></div>
+
+<p>Вообще никаких проблем после этого не было, причём как с Telegram версии 3.6, так и с LibreOffice версии 7.3. Насколько я понял, разработчикам проще сконцентрироваться на одном формате и довести пакет до ума, тем более с flatpak нет проблем с версиями библиотек.</p>
+<p>И... это всё насчёт косяков и тюнинга! Если знаешь, что делать, выглядит вроде несложно.</p>
+            </div>
+            <div class="post_list">
+                <a href="./author/konstantin-ovchinnikov.html">@Константин Овчинников</a> 
+                <span class="post_date">Сб 09 апреля 2022</span>
+                <div><span>Теги: </span>
+                            <span><a href="./tag/linux.html">#linux </a></span>
+                </div>
+            </div>
+                <div class="comments">
+                    <h2>Комментарии</h2>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_identifier = "2022-04-linux-2.html";
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'https://realchanges.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] ||
+                            document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+	  Создано с помощью <a href="http://getpelican.com/">Pelican</a>, 
+      тема <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> от <a href="https://parbhatpuri.com/">@parbhat</a>, иконки с <a href="https://icons8.com/">icon8</a>. РФ 12+.
+        </p>
+    </footer>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-44909202-3']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>

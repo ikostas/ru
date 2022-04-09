@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Настоящие изменения</title><link href="https://kovchinnikov.info/" rel="alternate"></link><link href="https://kovchinnikov.info/feeds/all.atom.xml" rel="self"></link><id>https://kovchinnikov.info/</id><updated>2022-04-03T20:34:00+03:00</updated><subtitle>Страница Константина Овчинникова</subtitle><entry><title>Linux на работе: что-то работает</title><link href="https://kovchinnikov.info/2022-04-linux-1.html" rel="alternate"></link><published>2022-04-03T20:34:00+03:00</published><updated>2022-04-03T20:34:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-03:/2022-04-linux-1.html</id><summary type="html">&lt;p&gt;22 года прошло, и вот под Linux можно работать&lt;/p&gt;</summary><content type="html">&lt;p&gt;Где-то в 2000-м году бородатый мужчина и по совместительству админ freebsd.org.ru в переходе (по-моему, на Арбатской) продал мне по стоимости болванки CD собственно болванку с записанной на ней FreeBSD. Все эти годы на своих личных компах я использовал её и Linux, но на работе безальтернативно Windows. И вот, всего лишь через 22 года я использую Linux в качестве основной системы на рабочем десктопе, правда, с некоторыми оговорками:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Настоящие изменения</title><link href="https://kovchinnikov.info/" rel="alternate"></link><link href="https://kovchinnikov.info/feeds/all.atom.xml" rel="self"></link><id>https://kovchinnikov.info/</id><updated>2022-09-09T11:44:00+03:00</updated><subtitle>Страница Константина Овчинникова</subtitle><entry><title>Linux на работе: проблемы и тюнинг</title><link href="https://kovchinnikov.info/2022-04-linux-2.html" rel="alternate"></link><published>2022-04-09T11:44:00+03:00</published><updated>2022-09-09T11:44:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-09:/2022-04-linux-2.html</id><summary type="html">&lt;p&gt;Полная перепись того, что не работает и что желательно донастроить&lt;/p&gt;</summary><content type="html">&lt;p&gt;В этой части расскажу о том, что не работает, и о том небольшом тюнинге, который крайне желательно сделать. Поскольку описывать не так уж много, приведу полные рецепты того, как всё сделать, хотя можно найти самому поиском. Речь пойдёт о следующем:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Тачпад&lt;/li&gt;
+&lt;li&gt;Яркость экрана&lt;/li&gt;
+&lt;li&gt;Сканер отпечатков пальцев&lt;/li&gt;
+&lt;li&gt;Наушники&lt;/li&gt;
+&lt;li&gt;Gnome vanilla&lt;/li&gt;
+&lt;li&gt;Telegram и LibreOffice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Тачпад&lt;/h3&gt;
+&lt;p&gt;Работал какое-то время, может быть даже несколько недель, и тут меня стал занимать вопрос: а как работает правая кнопка мыши на тачпаде? Долго мучился и тыкал в правый нижний угол, нажимал двумя пальцами, чтобы не искать правильный ответ: нужно поставить один палец на тачпад и нажать другим. Ничего необычного с точки зрения привычки, просто как-то не ожидаешь, что здесь что-то может быть по-другому.&lt;/p&gt;
+&lt;h3&gt;Яркость экрана&lt;/h3&gt;
+&lt;p&gt;Проблема в том, что после всё перезагрузки яркость выставляется на максимум. При этом яркость регулируется стандартными кнопками. Натыкаешься на &lt;a href="https://www.quora.com/How-can-I-fix-ubuntu-brightness-getting-reset-to-max-after-restart-problem"&gt;первый рецепт&lt;/a&gt;, с изменением параметров загрузки в /etc/default/grub и... яркость нормальная после перезагрузки, но не регулируется кнопками. Берём другой рецепт по той же ссылке:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get install xbacklight
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Нажимаем Alt-F2, вводим gnome-session-properties, добавляем новый пункт с командой&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;xbacklight -set 25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Вроде работает, фух.&lt;/p&gt;
+&lt;h3&gt;Сканер отпечатков пальцев&lt;/h3&gt;
+&lt;p&gt;Сканер отпечатков пальцев буквально неделю назад заработал после очередного обновления, но есть нюанс. В систему можно войти после перезагрузки через отпечаток пальца, но связка ключей (keyring, хранит пароли) не будет разблокирована в этом случае, и вы получите 2 окна с требованием ввести один и тот же пароль. В остальном работа сканера отпечатка пальцев полностью зависит от качества железа, на рабочем ноуте всё работает просто отлично, на домашнем примерно никак.&lt;/p&gt;
+&lt;h3&gt;Наушники&lt;/h3&gt;
+&lt;p&gt;Не знаю, связано ли это с тем, что в Ubuntu 20.04 звуковая система pulseaudio, а не pipewire (с которой у меня таких проблем не было). В общем, если компьютер перезагружается и наушники подключены к ноутбуку, то звук в наушники не идёт. Нужно вынуть и воткнуть заново, но тут надо помнить, что во время звонка (когда и обнаруживаешь, что звук не работает), надо отключить микрофон. Если этого не сделать, то во время перетыкания твоих наушников с микрофоном все участники звонка получат неслабый удар звуком по ушам. Даже не пробовал пока это починить, просто жду выхода новой версии LTS 22.04, в которой, возможно, этой проблемы нет.&lt;/p&gt;
+&lt;h3&gt;Gnome vanilla&lt;/h3&gt;
+&lt;p&gt;В Ubuntu LTS 20.04 можно наслаждаться Gnome 3, Gnome 4 нельзя поставить никак; с этим можно только смириться.&lt;/p&gt;
+&lt;p&gt;В чём проблема с Unity + X, на мой взгляд:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;панель слева съедает место и не вписывается в интерфейс&lt;/li&gt;
+&lt;li&gt;её невозможно сделать внизу&lt;/li&gt;
+&lt;li&gt;в целом мне не очень нравится история с авто-появлением, я предпочитаю кнопку Win&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Один из способов всё это исправить &amp;ndash; перейти на Vanilla Gnome: тут ничего особенного, находим &lt;a href="https://linuxconfig.org/how-to-install-gnome-on-ubuntu-20-04-lts-focal-fossa"&gt;инструкцию&lt;/a&gt;, я выбрал &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install gnome-session gdm3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;После перезагрузки нажимаем на колёсико и выбираем Gnome + Wayland. &lt;/p&gt;
+&lt;p&gt;Чтобы сделать лёгкий тюнинг, нам понадобятся расширения. А расширения легче всего установить с сайта &lt;a href="https://extensions.gnome.org/"&gt;Gnome Extensions&lt;/a&gt;. Здесь всё очень продумано:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Просто заходишь на сайт, сайт предлагает установить расширение Gnome Shell Extensions для браузера.&lt;/li&gt;
+&lt;li&gt;После установки расширения находишь нужное расширение, там будет переключатель On/Off, включаем.&lt;/li&gt;
+&lt;li&gt;Соглашаемся с установкой.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Параметры расширений можно менять в приложении Extensions или на закладке Extension в Gnome Tweaks; там же можно отключить ненужные расширения. &lt;/p&gt;
+&lt;h3&gt;Telegram и LibreOffice&lt;/h3&gt;
+&lt;p&gt;Тут я не был курсе, что Snap уже закопали, поэтому первым делом установил Telegram из него, версии 3.4. Пару раз при использовании Telegram всё замораживалось намертво. Как им удалось это сделать &amp;ndash; понятия не имею. ОК, удалил Telegram из Snap, поставил из стандартного репозитория. Версия оказалась 3.1, части функционала не хватало. И тут я понял, что все уже перешли на flatpak.&lt;/p&gt;
+&lt;p&gt;Но при попытке установить Telegram из flatpak оказалось, что нужно обновить версию flatpak. А для этого нужно подключить внешний PPA, например, как описано &lt;a href="https://linuxways.net/ubuntu/how-to-install-and-use-flatpak-on-ubuntu-20-04/"&gt;здесь&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo add-apt-repository ppa:alexlarsson/flatpak
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Вообще никаких проблем после этого не было, причём как с Telegram версии 3.6, так и с LibreOffice версии 7.3. Насколько я понял, разработчикам проще сконцентрироваться на одном формате и довести пакет до ума, тем более с flatpak нет проблем с версиями библиотек.&lt;/p&gt;
+&lt;p&gt;И... это всё насчёт косяков и тюнинга! Если знаешь, что делать, выглядит вроде несложно.&lt;/p&gt;</content><category term="blog"></category><category term="linux"></category></entry><entry><title>Linux на работе: что-то работает</title><link href="https://kovchinnikov.info/2022-04-linux-1.html" rel="alternate"></link><published>2022-04-03T20:34:00+03:00</published><updated>2022-04-03T20:34:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-03:/2022-04-linux-1.html</id><summary type="html">&lt;p&gt;22 года прошло, и вот под Linux можно работать&lt;/p&gt;</summary><content type="html">&lt;p&gt;Где-то в 2000-м году бородатый мужчина и по совместительству админ freebsd.org.ru в переходе (по-моему, на Арбатской) продал мне по стоимости болванки CD собственно болванку с записанной на ней FreeBSD. Все эти годы на своих личных компах я использовал её и Linux, но на работе безальтернативно Windows. И вот, всего лишь через 22 года я использую Linux в качестве основной системы на рабочем десктопе, правда, с некоторыми оговорками:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;большинство коллег используют Mac (в т.ч. разработчики), некоторые &amp;ndash; Windows (в силу привычки) и лишь некоторые разработчики &amp;ndash; Linux&lt;/li&gt;
 &lt;li&gt;для себя я сразу решил, то если упрусь в какие-то ограничения (больше всего беспокоили офисные приложения), то перееду на Mac, поскольку работа страдать не должна&lt;/li&gt;
