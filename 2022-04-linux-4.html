@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru" itemscope itemtype="http://schema.org/Person">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>Linux на работе: эксперименты</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Константин Овчинников">
+
+        <link rel="shortcut icon" href="/theme/images/logo3.ico">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Настоящие изменения">
+        <meta itemprop="image" content="/theme/images/logo3_small.png">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Настоящие изменения ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="ikostas2">
+        <meta name="twitter:image" content="">
+
+
+    <meta name="twitter:creator" content="ikostas2">
+    <meta name="twitter:url" content="./2022-04-linux-4.html">
+    <meta name="twitter:title" content="Настоящие изменения ~ Linux на работе: эксперименты">
+    <meta name="twitter:description" content="Почта и телега внутри терминала внутри Emacs">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Настоящие изменения ~ Linux на работе: эксперименты"/>
+    <meta property="og:description" content="Почта и телега внутри терминала внутри Emacs"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <h1><a class="sitetitle" href=".">Настоящие изменения</a></h1>
+        <p>Страница Константина Овчинникова</p>
+		<p>
+        <a href="."><img alt="Home" id="avatar" src="/theme/images/logo3_small.png"></a>
+    <!-- Site search -->
+<script async src="https://cse.google.com/cse.js?cx=83e5897c79a72ea3d"></script>
+<div class="gcse-search"></div>
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+                <li><a class="nav__link" href="https://kovchinnikov.info">Блог</a></li>
+                <li><a class="nav__link" href="https://kovchinnikov.info/tags.html">Темы записей блога</a></li>
+
+                <li><a class="nav__link" href="./pages/main.html">Статьи и инструменты</a></li>
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/ikostas2" target="_blank"><img alt="Twitter"
+                        src="./theme/images/icons/twitter.png"></a>
+                <a href="https://facebook.com/bizrealchanges/" target="_blank"><img alt="Facebook"
+                        src="./theme/images/icons/facebook.png"></a>
+                <a href="https://www.linkedin.com/in/konstantinovchinnikov/" target="_blank"><img alt="LinkedIn"
+                        src="./theme/images/icons/linkedin.png"></a>
+                <a href="https://www.youtube.com/channel/UCSWV-jXlrnxIMbAD-82_USg" target="_blank"><img alt="YouTube"
+                        src="./theme/images/icons/youtube.png"></a>
+                <a href="https://news.google.com/publications/CAAqBwgKMNDclQsw0_6sAw?oc=3&ceid=RU:ru" target="_blank"><img alt="GoogleNews"
+                        src="./theme/images/icons/googlenews.png"></a>
+                <a href="https://github.com/ikostas/" target="_blank"><img alt="GitHub"
+                        src="./theme/images/icons/github.png"></a>
+            <a href="./feeds/all.atom.xml" rel="alternate">
+                <img alt="RSS" src="./theme/images/icons/rss.png"></a>
+    </p>
+
+
+
+</aside>
+
+<!-- Content -->
+<article>
+
+    <section id="content">
+        <article>
+<!--End mc_embed_signup-->
+
+            <h2 class="post_title post_detail"><a href="./2022-04-linux-4.html" rel="bookmark" title="Permalink to Linux на работе: эксперименты">Linux на работе: эксперименты</a></h2>
+            <div class="entry-content blog-post">
+                <p>К такой теме нужен дисклеймер:</p>
+<ul>
+<li>Нет никаких рациональных причин делать это</li>
+<li>Настройка занимает существенное время</li>
+<li>Реально я это не использую, хотя пробовал сам, и всё работает</li>
+</ul>
+<p>Но если вы не испугались, мы заглянем за край работы в терминале: что будет, если по работе вы много используете Телеграм и почту, и вам понравилось работать в терминале? Есть варианты, о них и пойдёт речь:</p>
+<ul>
+<li>telega.el для Телеграм</li>
+<li>mu4e для почты вообще и в частности для Gmail</li>
+</ul>
+<h3>telega.el</h3>
+<p>Если смотреть альтернативные клиенты для Телеграма, то это один из наиболее живых и динамично развивающихся. Причём если вы используете графический Emacs (а не в терминале), то вам становится доступен просмотр графики, pdf прямо в Emacs. Да, голосовые и видео-звонки должны работать, но я не пробовал. Лично мне не очень нравится буйство красок, картинок и шрифтов в Emacs, что кардинально решает терминал. Но в терминале нет просмотра картинок, с помощью которых мы во многом общаемся.</p>
+<p>Но основной недостаток для меня не в этом, а реализация: в Emacs окна отдельных чатов сделаны отдельными буферами, поэтому их приходится всё время закрывать или переключаться между ними. В родном клиенте Телеги, на мой взгляд, решение лучше: два окна, контакты и чат, и содержание чата меняется в зависимости от того, какой контакт или чат выбран в окне контактов.</p>
+<p>Прежде всего, понадобится Emacs версии 27, для Ubuntu нужно подключить <a href="https://ubuntuhandbook.org/index.php/2020/09/install-emacs-27-1-ppa-ubuntu-20-04/">PPA</a> либо установить Emacs из Flatpak.</p>
+<p>Есть несколько вариантов установки telega.el, для Doom Emacs самый простой &ndash; указать telega.el в packages.el: там есть зависимые пакеты, которые в этом случае установятся автоматически:</p>
+<div class="highlight"><pre><span></span><code>(package! telega)
+</code></pre></div>
+
+<p>Дальше нужно установить tdlib, и вот тут у меня возник затык. Дело в том, что руководство на <a href="https://github.com/zevlg/telega.el">сайте telega.el</a> написано для разработчиков, а не для простых смертных, поэтому там явно не указано, что нужно установить зависимости:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install libssl-dev zlib1g zlib1g-dev libreadline6-dev
+</code></pre></div>
+
+<p>Ну и остаётся найти, где находится telega.el, и прописать путь в config.el:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">use</span><span class="o">-</span><span class="n">package</span> <span class="n">telega</span>
+  <span class="p">:</span><span class="nb">load</span><span class="o">-</span><span class="n">path</span>  <span class="s2">&quot;~/.emacs.d/.local/straight/build-27.2/telega/telega.el&quot;</span>
+  <span class="p">:</span><span class="n">commands</span> <span class="p">(</span><span class="n">telega</span><span class="p">)</span>
+  <span class="p">)</span>
+</code></pre></div>
+
+<p>После этого всё должно работать, запускается в Emacs с помощью Alt+X и дальше telega. :)</p>
+<h3>mu4e</h3>
+<p>Сейчас почта приходит, в основном, в HTML, и хочется тоже как-то снизить разнообразие оформлений, но при этом сохранить ссылки и возможность перехода по ним. В терминале Emacs может отображать HTML, и у него для этого есть несколько способов, последним является shr. Чтобы он отображал всё в стандартных цветах, нужно добавить в config.el:</p>
+<div class="highlight"><pre><span></span><code>(setq shr-use-colors nil)
+</code></pre></div>
+
+<p>С точки зрения клиентов для Emacs стандартным является Gnus, но у Gmail достаточно специфичная структура папок. Поэтому всё работает, но не очень хорошо. Mu4e хорошо работает с папками Gmail изначально, и заточен больше на поиск в большом числе сообщений. Кроме mu4e, нужно настроить транспорт, например, mbsync, а ещё установить сам mu нужной версии и инициализировать его, и тут команда отличается в зависимости от версии. В целом мне помогло <a href="https://www.erichgrunewald.com/posts/setting-up-gmail-in-doom-emacs-using-mbsync-and-mu4e/">руководство здесь</a>, а также поиск по пакетам.</p>
+<p>Наверное, здесь есть экономия времени для разработчиков, которые работают в Emacs, и для просмотра почты не нужно из него выходить, а редактирование писем происходит также в Emacs.</p>
+<p>Если вы прошли все эти квесты, и у вас всё заработало &ndash; поздравляю, вы неплохо размяли мозги. :)</p>
+            </div>
+            <div class="post_list">
+                <a href="./author/konstantin-ovchinnikov.html">@Константин Овчинников</a> 
+                <span class="post_date">Вс 17 апреля 2022</span>
+                <div><span>Теги: </span>
+                            <span><a href="./tag/linux.html">#linux </a></span>
+                </div>
+            </div>
+                <div class="comments">
+                    <h2>Комментарии</h2>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_identifier = "2022-04-linux-4.html";
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'https://realchanges.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] ||
+                            document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+	  Создано с помощью <a href="http://getpelican.com/">Pelican</a>, 
+      тема <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> от <a href="https://parbhatpuri.com/">@parbhat</a>, иконки с <a href="https://icons8.com/">icon8</a>. РФ 12+.
+        </p>
+    </footer>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-44909202-3']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>

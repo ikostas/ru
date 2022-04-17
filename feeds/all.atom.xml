@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Настоящие изменения</title><link href="https://kovchinnikov.info/" rel="alternate"></link><link href="https://kovchinnikov.info/feeds/all.atom.xml" rel="self"></link><id>https://kovchinnikov.info/</id><updated>2022-09-17T11:44:00+03:00</updated><subtitle>Страница Константина Овчинникова</subtitle><entry><title>Linux на работе: оптимизация и работа в терминале</title><link href="https://kovchinnikov.info/2022-04-linux-3.html" rel="alternate"></link><published>2022-04-16T23:42:00+03:00</published><updated>2022-04-16T23:42:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-16:/2022-04-linux-3.html</id><summary type="html">&lt;p&gt;Зачем переходить на Linux, если не пользуешься его преимуществами&lt;/p&gt;</summary><content type="html">&lt;p&gt;Когда пишут про Linux, все обычно упоминают бесплатность, стабильность, быстроту, но меня привлекало не только это. Почему люди ставят WSL или CygWin или Git for Windows. В них во всех есть coreutils, а также сама командная строка. А в чём прикол работать в командной строке:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Настоящие изменения</title><link href="https://kovchinnikov.info/" rel="alternate"></link><link href="https://kovchinnikov.info/feeds/all.atom.xml" rel="self"></link><id>https://kovchinnikov.info/</id><updated>2022-09-17T11:44:00+03:00</updated><subtitle>Страница Константина Овчинникова</subtitle><entry><title>Linux на работе: эксперименты</title><link href="https://kovchinnikov.info/2022-04-linux-4.html" rel="alternate"></link><published>2022-04-17T12:07:00+03:00</published><updated>2022-04-17T12:07:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-17:/2022-04-linux-4.html</id><summary type="html">&lt;p&gt;Почта и телега внутри терминала внутри Emacs&lt;/p&gt;</summary><content type="html">&lt;p&gt;К такой теме нужен дисклеймер:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Нет никаких рациональных причин делать это&lt;/li&gt;
+&lt;li&gt;Настройка занимает существенное время&lt;/li&gt;
+&lt;li&gt;Реально я это не использую, хотя пробовал сам, и всё работает&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Но если вы не испугались, мы заглянем за край работы в терминале: что будет, если по работе вы много используете Телеграм и почту, и вам понравилось работать в терминале? Есть варианты, о них и пойдёт речь:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;telega.el для Телеграм&lt;/li&gt;
+&lt;li&gt;mu4e для почты вообще и в частности для Gmail&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;telega.el&lt;/h3&gt;
+&lt;p&gt;Если смотреть альтернативные клиенты для Телеграма, то это один из наиболее живых и динамично развивающихся. Причём если вы используете графический Emacs (а не в терминале), то вам становится доступен просмотр графики, pdf прямо в Emacs. Да, голосовые и видео-звонки должны работать, но я не пробовал. Лично мне не очень нравится буйство красок, картинок и шрифтов в Emacs, что кардинально решает терминал. Но в терминале нет просмотра картинок, с помощью которых мы во многом общаемся.&lt;/p&gt;
+&lt;p&gt;Но основной недостаток для меня не в этом, а реализация: в Emacs окна отдельных чатов сделаны отдельными буферами, поэтому их приходится всё время закрывать или переключаться между ними. В родном клиенте Телеги, на мой взгляд, решение лучше: два окна, контакты и чат, и содержание чата меняется в зависимости от того, какой контакт или чат выбран в окне контактов.&lt;/p&gt;
+&lt;p&gt;Прежде всего, понадобится Emacs версии 27, для Ubuntu нужно подключить &lt;a href="https://ubuntuhandbook.org/index.php/2020/09/install-emacs-27-1-ppa-ubuntu-20-04/"&gt;PPA&lt;/a&gt; либо установить Emacs из Flatpak.&lt;/p&gt;
+&lt;p&gt;Есть несколько вариантов установки telega.el, для Doom Emacs самый простой &amp;ndash; указать telega.el в packages.el: там есть зависимые пакеты, которые в этом случае установятся автоматически:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(package! telega)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Дальше нужно установить tdlib, и вот тут у меня возник затык. Дело в том, что руководство на &lt;a href="https://github.com/zevlg/telega.el"&gt;сайте telega.el&lt;/a&gt; написано для разработчиков, а не для простых смертных, поэтому там явно не указано, что нужно установить зависимости:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install libssl-dev zlib1g zlib1g-dev libreadline6-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ну и остаётся найти, где находится telega.el, и прописать путь в config.el:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;telega&lt;/span&gt;
+  &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;load&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;  &lt;span class="s2"&gt;&amp;quot;~/.emacs.d/.local/straight/build-27.2/telega/telega.el&amp;quot;&lt;/span&gt;
+  &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;commands&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;telega&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;После этого всё должно работать, запускается в Emacs с помощью Alt+X и дальше telega. :)&lt;/p&gt;
+&lt;h3&gt;mu4e&lt;/h3&gt;
+&lt;p&gt;Сейчас почта приходит, в основном, в HTML, и хочется тоже как-то снизить разнообразие оформлений, но при этом сохранить ссылки и возможность перехода по ним. В терминале Emacs может отображать HTML, и у него для этого есть несколько способов, последним является shr. Чтобы он отображал всё в стандартных цветах, нужно добавить в config.el:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(setq shr-use-colors nil)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;С точки зрения клиентов для Emacs стандартным является Gnus, но у Gmail достаточно специфичная структура папок. Поэтому всё работает, но не очень хорошо. Mu4e хорошо работает с папками Gmail изначально, и заточен больше на поиск в большом числе сообщений. Кроме mu4e, нужно настроить транспорт, например, mbsync, а ещё установить сам mu нужной версии и инициализировать его, и тут команда отличается в зависимости от версии. В целом мне помогло &lt;a href="https://www.erichgrunewald.com/posts/setting-up-gmail-in-doom-emacs-using-mbsync-and-mu4e/"&gt;руководство здесь&lt;/a&gt;, а также поиск по пакетам.&lt;/p&gt;
+&lt;p&gt;Наверное, здесь есть экономия времени для разработчиков, которые работают в Emacs, и для просмотра почты не нужно из него выходить, а редактирование писем происходит также в Emacs.&lt;/p&gt;
+&lt;p&gt;Если вы прошли все эти квесты, и у вас всё заработало &amp;ndash; поздравляю, вы неплохо размяли мозги. :)&lt;/p&gt;</content><category term="blog"></category><category term="linux"></category></entry><entry><title>Linux на работе: оптимизация и работа в терминале</title><link href="https://kovchinnikov.info/2022-04-linux-3.html" rel="alternate"></link><published>2022-04-16T23:42:00+03:00</published><updated>2022-04-16T23:42:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-16:/2022-04-linux-3.html</id><summary type="html">&lt;p&gt;Зачем переходить на Linux, если не пользуешься его преимуществами&lt;/p&gt;</summary><content type="html">&lt;p&gt;Когда пишут про Linux, все обычно упоминают бесплатность, стабильность, быстроту, но меня привлекало не только это. Почему люди ставят WSL или CygWin или Git for Windows. В них во всех есть coreutils, а также сама командная строка. А в чём прикол работать в командной строке:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Использовать Vim и Emacs для работы с текстом&lt;/li&gt;
 &lt;li&gt;Уменьшить visual distraction, когда все шрифты и цвета унифицированы&lt;/li&gt;
