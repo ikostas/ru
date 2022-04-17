@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru" itemscope itemtype="http://schema.org/Person">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>Linux на работе: оптимизация и работа в терминале</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Константин Овчинников">
+
+        <link rel="shortcut icon" href="/theme/images/logo3.ico">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Настоящие изменения">
+        <meta itemprop="image" content="/theme/images/logo3_small.png">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Настоящие изменения ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="ikostas2">
+        <meta name="twitter:image" content="">
+
+
+    <meta name="twitter:creator" content="ikostas2">
+    <meta name="twitter:url" content="./2022-04-linux-3.html">
+    <meta name="twitter:title" content="Настоящие изменения ~ Linux на работе: оптимизация и работа в терминале">
+    <meta name="twitter:description" content="Зачем переходить на Linux, если не пользуешься его преимуществами">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Настоящие изменения ~ Linux на работе: оптимизация и работа в терминале"/>
+    <meta property="og:description" content="Зачем переходить на Linux, если не пользуешься его преимуществами"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <h1><a class="sitetitle" href=".">Настоящие изменения</a></h1>
+        <p>Страница Константина Овчинникова</p>
+		<p>
+        <a href="."><img alt="Home" id="avatar" src="/theme/images/logo3_small.png"></a>
+    <!-- Site search -->
+<script async src="https://cse.google.com/cse.js?cx=83e5897c79a72ea3d"></script>
+<div class="gcse-search"></div>
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+                <li><a class="nav__link" href="https://kovchinnikov.info">Блог</a></li>
+                <li><a class="nav__link" href="https://kovchinnikov.info/tags.html">Темы записей блога</a></li>
+
+                <li><a class="nav__link" href="./pages/main.html">Статьи и инструменты</a></li>
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/ikostas2" target="_blank"><img alt="Twitter"
+                        src="./theme/images/icons/twitter.png"></a>
+                <a href="https://facebook.com/bizrealchanges/" target="_blank"><img alt="Facebook"
+                        src="./theme/images/icons/facebook.png"></a>
+                <a href="https://www.linkedin.com/in/konstantinovchinnikov/" target="_blank"><img alt="LinkedIn"
+                        src="./theme/images/icons/linkedin.png"></a>
+                <a href="https://www.youtube.com/channel/UCSWV-jXlrnxIMbAD-82_USg" target="_blank"><img alt="YouTube"
+                        src="./theme/images/icons/youtube.png"></a>
+                <a href="https://news.google.com/publications/CAAqBwgKMNDclQsw0_6sAw?oc=3&ceid=RU:ru" target="_blank"><img alt="GoogleNews"
+                        src="./theme/images/icons/googlenews.png"></a>
+                <a href="https://github.com/ikostas/" target="_blank"><img alt="GitHub"
+                        src="./theme/images/icons/github.png"></a>
+            <a href="./feeds/all.atom.xml" rel="alternate">
+                <img alt="RSS" src="./theme/images/icons/rss.png"></a>
+    </p>
+
+
+
+</aside>
+
+<!-- Content -->
+<article>
+
+    <section id="content">
+        <article>
+<!--End mc_embed_signup-->
+
+            <h2 class="post_title post_detail"><a href="./2022-04-linux-3.html" rel="bookmark" title="Permalink to Linux на работе: оптимизация и работа в терминале">Linux на работе: оптимизация и работа в терминале</a></h2>
+            <div class="entry-content blog-post">
+                <p>Когда пишут про Linux, все обычно упоминают бесплатность, стабильность, быстроту, но меня привлекало не только это. Почему люди ставят WSL или CygWin или Git for Windows. В них во всех есть coreutils, а также сама командная строка. А в чём прикол работать в командной строке:</p>
+<ul>
+<li>Использовать Vim и Emacs для работы с текстом</li>
+<li>Уменьшить visual distraction, когда все шрифты и цвета унифицированы</li>
+<li>Использовать другие удобные инструменты командной строки</li>
+<li>Выполнять большинство действий с клавиатуры, без помощи мыши, что существенно быстрее</li>
+<li>Бонусом уменьшается потребление ресурсов</li>
+</ul>
+<p>С терминалом можно зайти настолько далеко, что часть вещей я вынес в следующую статью, которая будет скорее про эксперименты, но в целом можно копать в сторону списков приложений в командной строке, <a href="https://github.com/agarrharr/awesome-cli-apps">например</a>. Также интересный момент в том, что много приложений, которые могут работать в командной строке, встроены в Emacs, и к некоторым из них мы вернёмся как раз в экспериментах. Но начать обустройство командной строки надо с менеджера терминальных сессий, мы ведь будем запускать несколько приложений в командной строке одновременно.</p>
+<h3>Менеджер сессий в терминале</h3>
+<p>Задачу запуска нескольких программ в терминале можно решить несколькими способами:</p>
+<ul>
+<li>Запускать программы в фоновом режиме, добавив в конце &amp;</li>
+<li>Отправлять программу в спящий режим, нажав Ctrl+Z, и возвращать обратно командной fg</li>
+<li>Использовать вкладки терминала, что мне не очень понравилось, поскольку занимает место на экране</li>
+<li>Использовать менеджеры сессий типа tmux, которые скорее заточены на разделение экрана на части; что мне не очень актуально, потому что я не использую большой внешний монитор, а работаю за обычным экраном ноута</li>
+<li>Использовать старый добрый screen</li>
+</ul>
+<p>Screen &ndash; это абсолютно адская штука в плане функциональности, он заточен на работу на удалённых серверах. Например, вы запускаете несколько процессов на сервере, у вас обрывается соединение: процессы продолжaт работать, а к сессии можно подключиться заново. Но также он умеет запускать несколько сессий на удалённом или локальном компьютере, переключаться между ними.</p>
+<p>Просто приведу здесь свой .screenrc, который делает несколько вещей:</p>
+<ul>
+<li>Выводит статусную строку, чтобы привыкнуть к тому, в каком окне находишься</li>
+<li>Меняет стандартное сочетание клавиш, с которого начинаются любые команды, с Ctrl+A на Ctrl+]</li>
+<li>Запускает в первой сессии emacs, а во второй обычный shell</li>
+</ul>
+<div class="highlight"><pre><span></span><code>escape ^]] # Ctrl+] для команд screen
+startup_message off
+hardstatus alwayslastline &quot;%{= bR}[%{= bY}%H%{= bR}]%{= bY} %n%{= bR}:%{= bY}%t  %{= bw}%W %=%{= br}[%{= bY}%h%{= bR}]&quot;
+term screen-256color
+screen -t emacs 1 emacs-nox
+screen -t shell 2 bash
+select 1
+bind c screen 1 # window numbering starts at 1 not 0
+bind 0 select 10
+</code></pre></div>
+
+<p>Чтобы начать использовать, достаточно ввести в терминале screen. Чтобы получить помощь &ndash; Ctrl+] и потом ?. Но это не всё, мы же можем запускать screen сразу при открытии gnome-termnial (или другого терминала). Для этого заходим в параметры терминала, в gnome-terminal это профиль и закладка Command, ставим флаг, чтобы запускать команду при старте и вводим screen. Кроме  этого, у меня gnome-terminal добавлен в Startup applications (это можно сделать в том же Gnome Tweaks), поэтому при загрузке происходит следующее:</p>
+<ol>
+<li>Открывается терминал</li>
+<li>В терминале запускается screen</li>
+<li>В screen открывается две сессии, одна из них emacs (в котором, кстати, можно сохранять сессии)</li>
+</ol>
+<p>Это уже экономит некоторое количество времени. Да, кстати, в случае gnome-terminal можно копировать в общесистемный буфер обмена по Ctrl+Shift+C и вставлять в терминал из общего буфера обмена по Ctrl+Shift+V. Эти сочетания настраиваются, но это минимум для выживания в командной строке.</p>
+<h3>Vim и Emacs</h3>
+<p>Есть люди, которые спорят про то, что лучше, я пока использую оба редактора для разных сценариев:</p>
+<ul>
+<li>Emacs скорее как среду запуска приложений внутри него</li>
+<li>Vim для набора больших текстов, таких как записи в этот блог</li>
+</ul>
+<p>Чтобы сделать Vim удобнее, достаточно установить плагин типа <a href="https://github.com/itchyny/lightline.vim">lightline</a>, что добавит статусную строку, она же индикатор режима. Есть разные способы установки, по ссылке всё описано. И о том, как в 2 шага перейти на Vim из IDE, <a href="https://www.youtube.com/watch?v=1UXHsCT18wE&amp;list=WL&amp;index=21">видео здесь</a>. Ну и можно взять какой-нибудь cheat sheet, <a href="https://devhints.io/vim">такой</a> или <a href="https://phoenixnap.com/kb/vim-commands-cheat-sheet">для печати</a> и периодически посматривать в него.</p>
+<p>Emacs привлёк меня <a href="https://orgmode.org/">org-mode</a>, в нём можно вести записи и список задач. Пользуюсь достаточно долго, мне нравится, хотя недавно узнал, что есть аналогичная штука для vim &ndash; <a href="https://github.com/vimwiki/vimwiki">vimwiki</a>. Org-mode &ndash; это как dropbox paper, только локально. Что хочется видеть:</p>
+<ul>
+<li>заголовки</li>
+<li>скрытые ссылки</li>
+<li>переход по ссылкам</li>
+<li>создавать задачи</li>
+<li>отмечать задачи как выполненные</li>
+</ul>
+<p>Это всё есть, как и многое другое.</p>
+<p>При этом Emacs можно использовать, если грубо, тремя разными путями:</p>
+<ul>
+<li>Установить голый Emacs</li>
+<li><a href="https://github.com/hlissner/doom-emacs">Doom Emacs</a></li>
+<li><a href="https://www.spacemacs.org/">Spacemacs</a></li>
+</ul>
+<p>Лично я для себя выбрал второй вариант, поскольку он быстрый, простой и прозрачный. Но для работы с русским логично поставить авто-переключалку на русский при вводе команд, это делается добавлением в packages.el:</p>
+<div class="highlight"><pre><span></span><code>(package! reverse-im)
+</code></pre></div>
+
+<p>А в config.el:</p>
+<div class="highlight"><pre><span></span><code>(use-package reverse-im
+  :config
+  (reverse-im-activate &quot;russian-computer&quot;))
+</code></pre></div>
+
+<p>Дальше уже выбираем в init.el нужные пакеты, обновляем doom-emacs. Кстати, для этого просто сделал alias в .bashrc:</p>
+<div class="highlight"><pre><span></span><code>alias doom-update=&quot;~/.emacs.d/bin/doom sync&quot;
+</code></pre></div>
+
+<h3>Другие инструменты</h3>
+<p>Например, можно уменьшить размер PDF</p>
+<div class="highlight"><pre><span></span><code>gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+</code></pre></div>
+
+<ul>
+<li>Можно работать в python prompt с pandas, и для этого не обязательно ставить Jupyter Notebook</li>
+<li>Можно подключаться к базам данных типа mysql</li>
+<li>Работать с git</li>
+<li>Создать архив в bz2: <code>tar jcf inputdir outputfile.tbz</code></li>
+<li>Подключаться к другим компьютерам по ssh</li>
+<li>Делать поиск внутри текстовых файлов с помощью fgrep</li>
+<li>Смотреть нагрузку на систему и процессы с помощью top / htop</li>
+<li>Переносить данные между облачными хранилищами с помощью rclone</li>
+<li>Ну и конечно работать с установкой программ с помощью apt / dnf, rpm / dpkg, snap / flatpak</li>
+</ul>
+<p>Это только то, что использовал последнее время. В заключение этой части хочу заметить, что не всегда путь к этим конфигурациям был простым, поэтому помогало то, что я мог экспериментировать на домашнем компе, а потом закинуть конфиги на рабочий комп. Ведь конфиги &ndash; это обычные текстовые файлы, при этом понятно, какие.</p>
+            </div>
+            <div class="post_list">
+                <a href="./author/konstantin-ovchinnikov.html">@Константин Овчинников</a> 
+                <span class="post_date">Сб 16 апреля 2022</span>
+                <div><span>Теги: </span>
+                            <span><a href="./tag/linux.html">#linux </a></span>
+                </div>
+            </div>
+                <div class="comments">
+                    <h2>Комментарии</h2>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_identifier = "2022-04-linux-3.html";
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'https://realchanges.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] ||
+                            document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+	  Создано с помощью <a href="http://getpelican.com/">Pelican</a>, 
+      тема <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> от <a href="https://parbhatpuri.com/">@parbhat</a>, иконки с <a href="https://icons8.com/">icon8</a>. РФ 12+.
+        </p>
+    </footer>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-44909202-3']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>

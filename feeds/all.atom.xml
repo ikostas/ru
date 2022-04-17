@@ -1,5 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Настоящие изменения</title><link href="https://kovchinnikov.info/" rel="alternate"></link><link href="https://kovchinnikov.info/feeds/all.atom.xml" rel="self"></link><id>https://kovchinnikov.info/</id><updated>2022-09-09T11:44:00+03:00</updated><subtitle>Страница Константина Овчинникова</subtitle><entry><title>Linux на работе: проблемы и тюнинг</title><link href="https://kovchinnikov.info/2022-04-linux-2.html" rel="alternate"></link><published>2022-04-09T11:44:00+03:00</published><updated>2022-09-09T11:44:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-09:/2022-04-linux-2.html</id><summary type="html">&lt;p&gt;Полная перепись того, что не работает и что желательно донастроить&lt;/p&gt;</summary><content type="html">&lt;p&gt;В этой части расскажу о том, что не работает, и о том небольшом тюнинге, который крайне желательно сделать. Поскольку описывать не так уж много, приведу полные рецепты того, как всё сделать, хотя можно найти самому поиском. Речь пойдёт о следующем:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Настоящие изменения</title><link href="https://kovchinnikov.info/" rel="alternate"></link><link href="https://kovchinnikov.info/feeds/all.atom.xml" rel="self"></link><id>https://kovchinnikov.info/</id><updated>2022-09-17T11:44:00+03:00</updated><subtitle>Страница Константина Овчинникова</subtitle><entry><title>Linux на работе: оптимизация и работа в терминале</title><link href="https://kovchinnikov.info/2022-04-linux-3.html" rel="alternate"></link><published>2022-04-16T23:42:00+03:00</published><updated>2022-04-16T23:42:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-16:/2022-04-linux-3.html</id><summary type="html">&lt;p&gt;Зачем переходить на Linux, если не пользуешься его преимуществами&lt;/p&gt;</summary><content type="html">&lt;p&gt;Когда пишут про Linux, все обычно упоминают бесплатность, стабильность, быстроту, но меня привлекало не только это. Почему люди ставят WSL или CygWin или Git for Windows. В них во всех есть coreutils, а также сама командная строка. А в чём прикол работать в командной строке:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Использовать Vim и Emacs для работы с текстом&lt;/li&gt;
+&lt;li&gt;Уменьшить visual distraction, когда все шрифты и цвета унифицированы&lt;/li&gt;
+&lt;li&gt;Использовать другие удобные инструменты командной строки&lt;/li&gt;
+&lt;li&gt;Выполнять большинство действий с клавиатуры, без помощи мыши, что существенно быстрее&lt;/li&gt;
+&lt;li&gt;Бонусом уменьшается потребление ресурсов&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;С терминалом можно зайти настолько далеко, что часть вещей я вынес в следующую статью, которая будет скорее про эксперименты, но в целом можно копать в сторону списков приложений в командной строке, &lt;a href="https://github.com/agarrharr/awesome-cli-apps"&gt;например&lt;/a&gt;. Также интересный момент в том, что много приложений, которые могут работать в командной строке, встроены в Emacs, и к некоторым из них мы вернёмся как раз в экспериментах. Но начать обустройство командной строки надо с менеджера терминальных сессий, мы ведь будем запускать несколько приложений в командной строке одновременно.&lt;/p&gt;
+&lt;h3&gt;Менеджер сессий в терминале&lt;/h3&gt;
+&lt;p&gt;Задачу запуска нескольких программ в терминале можно решить несколькими способами:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Запускать программы в фоновом режиме, добавив в конце &amp;amp;&lt;/li&gt;
+&lt;li&gt;Отправлять программу в спящий режим, нажав Ctrl+Z, и возвращать обратно командной fg&lt;/li&gt;
+&lt;li&gt;Использовать вкладки терминала, что мне не очень понравилось, поскольку занимает место на экране&lt;/li&gt;
+&lt;li&gt;Использовать менеджеры сессий типа tmux, которые скорее заточены на разделение экрана на части; что мне не очень актуально, потому что я не использую большой внешний монитор, а работаю за обычным экраном ноута&lt;/li&gt;
+&lt;li&gt;Использовать старый добрый screen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Screen &amp;ndash; это абсолютно адская штука в плане функциональности, он заточен на работу на удалённых серверах. Например, вы запускаете несколько процессов на сервере, у вас обрывается соединение: процессы продолжaт работать, а к сессии можно подключиться заново. Но также он умеет запускать несколько сессий на удалённом или локальном компьютере, переключаться между ними.&lt;/p&gt;
+&lt;p&gt;Просто приведу здесь свой .screenrc, который делает несколько вещей:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Выводит статусную строку, чтобы привыкнуть к тому, в каком окне находишься&lt;/li&gt;
+&lt;li&gt;Меняет стандартное сочетание клавиш, с которого начинаются любые команды, с Ctrl+A на Ctrl+]&lt;/li&gt;
+&lt;li&gt;Запускает в первой сессии emacs, а во второй обычный shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;escape ^]] # Ctrl+] для команд screen
+startup_message off
+hardstatus alwayslastline &amp;quot;%{= bR}[%{= bY}%H%{= bR}]%{= bY} %n%{= bR}:%{= bY}%t  %{= bw}%W %=%{= br}[%{= bY}%h%{= bR}]&amp;quot;
+term screen-256color
+screen -t emacs 1 emacs-nox
+screen -t shell 2 bash
+select 1
+bind c screen 1 # window numbering starts at 1 not 0
+bind 0 select 10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Чтобы начать использовать, достаточно ввести в терминале screen. Чтобы получить помощь &amp;ndash; Ctrl+] и потом ?. Но это не всё, мы же можем запускать screen сразу при открытии gnome-termnial (или другого терминала). Для этого заходим в параметры терминала, в gnome-terminal это профиль и закладка Command, ставим флаг, чтобы запускать команду при старте и вводим screen. Кроме  этого, у меня gnome-terminal добавлен в Startup applications (это можно сделать в том же Gnome Tweaks), поэтому при загрузке происходит следующее:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Открывается терминал&lt;/li&gt;
+&lt;li&gt;В терминале запускается screen&lt;/li&gt;
+&lt;li&gt;В screen открывается две сессии, одна из них emacs (в котором, кстати, можно сохранять сессии)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Это уже экономит некоторое количество времени. Да, кстати, в случае gnome-terminal можно копировать в общесистемный буфер обмена по Ctrl+Shift+C и вставлять в терминал из общего буфера обмена по Ctrl+Shift+V. Эти сочетания настраиваются, но это минимум для выживания в командной строке.&lt;/p&gt;
+&lt;h3&gt;Vim и Emacs&lt;/h3&gt;
+&lt;p&gt;Есть люди, которые спорят про то, что лучше, я пока использую оба редактора для разных сценариев:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Emacs скорее как среду запуска приложений внутри него&lt;/li&gt;
+&lt;li&gt;Vim для набора больших текстов, таких как записи в этот блог&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Чтобы сделать Vim удобнее, достаточно установить плагин типа &lt;a href="https://github.com/itchyny/lightline.vim"&gt;lightline&lt;/a&gt;, что добавит статусную строку, она же индикатор режима. Есть разные способы установки, по ссылке всё описано. И о том, как в 2 шага перейти на Vim из IDE, &lt;a href="https://www.youtube.com/watch?v=1UXHsCT18wE&amp;amp;list=WL&amp;amp;index=21"&gt;видео здесь&lt;/a&gt;. Ну и можно взять какой-нибудь cheat sheet, &lt;a href="https://devhints.io/vim"&gt;такой&lt;/a&gt; или &lt;a href="https://phoenixnap.com/kb/vim-commands-cheat-sheet"&gt;для печати&lt;/a&gt; и периодически посматривать в него.&lt;/p&gt;
+&lt;p&gt;Emacs привлёк меня &lt;a href="https://orgmode.org/"&gt;org-mode&lt;/a&gt;, в нём можно вести записи и список задач. Пользуюсь достаточно долго, мне нравится, хотя недавно узнал, что есть аналогичная штука для vim &amp;ndash; &lt;a href="https://github.com/vimwiki/vimwiki"&gt;vimwiki&lt;/a&gt;. Org-mode &amp;ndash; это как dropbox paper, только локально. Что хочется видеть:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;заголовки&lt;/li&gt;
+&lt;li&gt;скрытые ссылки&lt;/li&gt;
+&lt;li&gt;переход по ссылкам&lt;/li&gt;
+&lt;li&gt;создавать задачи&lt;/li&gt;
+&lt;li&gt;отмечать задачи как выполненные&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Это всё есть, как и многое другое.&lt;/p&gt;
+&lt;p&gt;При этом Emacs можно использовать, если грубо, тремя разными путями:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Установить голый Emacs&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/hlissner/doom-emacs"&gt;Doom Emacs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.spacemacs.org/"&gt;Spacemacs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Лично я для себя выбрал второй вариант, поскольку он быстрый, простой и прозрачный. Но для работы с русским логично поставить авто-переключалку на русский при вводе команд, это делается добавлением в packages.el:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(package! reverse-im)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;А в config.el:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(use-package reverse-im
+  :config
+  (reverse-im-activate &amp;quot;russian-computer&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Дальше уже выбираем в init.el нужные пакеты, обновляем doom-emacs. Кстати, для этого просто сделал alias в .bashrc:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;alias doom-update=&amp;quot;~/.emacs.d/bin/doom sync&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Другие инструменты&lt;/h3&gt;
+&lt;p&gt;Например, можно уменьшить размер PDF&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Можно работать в python prompt с pandas, и для этого не обязательно ставить Jupyter Notebook&lt;/li&gt;
+&lt;li&gt;Можно подключаться к базам данных типа mysql&lt;/li&gt;
+&lt;li&gt;Работать с git&lt;/li&gt;
+&lt;li&gt;Создать архив в bz2: &lt;code&gt;tar jcf inputdir outputfile.tbz&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Подключаться к другим компьютерам по ssh&lt;/li&gt;
+&lt;li&gt;Делать поиск внутри текстовых файлов с помощью fgrep&lt;/li&gt;
+&lt;li&gt;Смотреть нагрузку на систему и процессы с помощью top / htop&lt;/li&gt;
+&lt;li&gt;Переносить данные между облачными хранилищами с помощью rclone&lt;/li&gt;
+&lt;li&gt;Ну и конечно работать с установкой программ с помощью apt / dnf, rpm / dpkg, snap / flatpak&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Это только то, что использовал последнее время. В заключение этой части хочу заметить, что не всегда путь к этим конфигурациям был простым, поэтому помогало то, что я мог экспериментировать на домашнем компе, а потом закинуть конфиги на рабочий комп. Ведь конфиги &amp;ndash; это обычные текстовые файлы, при этом понятно, какие.&lt;/p&gt;</content><category term="blog"></category><category term="linux"></category></entry><entry><title>Linux на работе: проблемы и тюнинг</title><link href="https://kovchinnikov.info/2022-04-linux-2.html" rel="alternate"></link><published>2022-04-09T11:44:00+03:00</published><updated>2022-09-17T11:44:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-09:/2022-04-linux-2.html</id><summary type="html">&lt;p&gt;Полная перепись того, что не работает и что желательно донастроить&lt;/p&gt;</summary><content type="html">&lt;p&gt;В этой части расскажу о том, что не работает, и о том небольшом тюнинге, который крайне желательно сделать. Поскольку описывать не так уж много, приведу полные рецепты того, как всё сделать, хотя можно найти самому поиском. Речь пойдёт о следующем:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Тачпад&lt;/li&gt;
 &lt;li&gt;Яркость экрана&lt;/li&gt;
