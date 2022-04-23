@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru" itemscope itemtype="http://schema.org/Person">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>Linux на работе: будущее</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Константин Овчинников">
+
+        <link rel="shortcut icon" href="/theme/images/logo3.ico">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Настоящие изменения">
+        <meta itemprop="image" content="/theme/images/logo3_small.png">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Настоящие изменения ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="ikostas2">
+        <meta name="twitter:image" content="">
+
+
+    <meta name="twitter:creator" content="ikostas2">
+    <meta name="twitter:url" content="./2022-04-linux-5.html">
+    <meta name="twitter:title" content="Настоящие изменения ~ Linux на работе: будущее">
+    <meta name="twitter:description" content="Неизменные операционные системы Fedora Silberblue, Clear Linux и подобные">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Настоящие изменения ~ Linux на работе: будущее"/>
+    <meta property="og:description" content="Неизменные операционные системы Fedora Silberblue, Clear Linux и подобные"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <h1><a class="sitetitle" href=".">Настоящие изменения</a></h1>
+        <p>Страница Константина Овчинникова</p>
+		<p>
+        <a href="."><img alt="Home" id="avatar" src="/theme/images/logo3_small.png"></a>
+    <!-- Site search -->
+<script async src="https://cse.google.com/cse.js?cx=83e5897c79a72ea3d"></script>
+<div class="gcse-search"></div>
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+                <li><a class="nav__link" href="https://kovchinnikov.info">Блог</a></li>
+                <li><a class="nav__link" href="https://kovchinnikov.info/tags.html">Темы записей блога</a></li>
+
+                <li><a class="nav__link" href="./pages/main.html">Статьи и инструменты</a></li>
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/ikostas2" target="_blank"><img alt="Twitter"
+                        src="./theme/images/icons/twitter.png"></a>
+                <a href="https://facebook.com/bizrealchanges/" target="_blank"><img alt="Facebook"
+                        src="./theme/images/icons/facebook.png"></a>
+                <a href="https://www.linkedin.com/in/konstantinovchinnikov/" target="_blank"><img alt="LinkedIn"
+                        src="./theme/images/icons/linkedin.png"></a>
+                <a href="https://www.youtube.com/channel/UCSWV-jXlrnxIMbAD-82_USg" target="_blank"><img alt="YouTube"
+                        src="./theme/images/icons/youtube.png"></a>
+                <a href="https://news.google.com/publications/CAAqBwgKMNDclQsw0_6sAw?oc=3&ceid=RU:ru" target="_blank"><img alt="GoogleNews"
+                        src="./theme/images/icons/googlenews.png"></a>
+                <a href="https://github.com/ikostas/" target="_blank"><img alt="GitHub"
+                        src="./theme/images/icons/github.png"></a>
+            <a href="./feeds/all.atom.xml" rel="alternate">
+                <img alt="RSS" src="./theme/images/icons/rss.png"></a>
+    </p>
+
+
+
+</aside>
+
+<!-- Content -->
+<article>
+
+    <section id="content">
+        <article>
+<!--End mc_embed_signup-->
+
+            <h2 class="post_title post_detail"><a href="./2022-04-linux-5.html" rel="bookmark" title="Permalink to Linux на работе: будущее">Linux на работе: будущее</a></h2>
+            <div class="entry-content blog-post">
+                <p>Как будет развиваться Linux для рабочего десктопа? Есть один очевидный и частично правильный ответ: ChromeOS. В нём можно использовать только веб-приложения, но прикол не в этом, а в том, что в основе его лежит "неизменный" Linux &ndash; образ, включающий ядро, набор библиотек и программ, которые пользователь не может изменять. Очень многие проблемы Linux лежат именно в этой области: пользователи шаловливыми ручонками делают что-то не то с ядром, устанавливают конфликтующие или неподходящие версии библиотек или программ. Вот и я недавно набрал <code>sudo apt install emacs</code>, но у меня уже были установлены части emacs27, поэтому dpkg вошёл в ступор, из которого простыми способами типа <code>sudo apt install -f</code> его вывести не удалось. Пришлось тратить время, искать какие-то рецепты.</p>
+<p>В целом, чтобы вывести из строя такой замечательный дистрибутив, как Debian, достаточно подключить неподходящий репозиторий и обновиться. Кроме этого, даже не подключая ничего и просто добавляя программы, можно наткнуться на порушенные зависимости и несовместимость библиотек. Ubuntu в этом смысле сломать чуть сложнее, потому что основные рецепты, доступные в интернете, написаны как раз для неё. Ну а сотворить с Fedora что-то мне ещё не удавалось. Но если вы думаете, что у вас проблемы, представьте авторов программ, которым поступают баги от пользователей с разных дистрибутивов, в которых может быть любая комбинация программ, ядер, библиотек. Им это всё надоело, и они придумали flatpak. Какие с ним проблемы, начнём сразу с главного:</p>
+<ul>
+<li>Библиотеки входят в состав программ, а значит, экономии памяти нет: одна и та же библиотека может устанавливаться несколько раз. А сейчас все модные графические программы используют что? Правильно, Electron, который занимает до фига памяти.</li>
+<li>Программа запускается в изолированном окружении, поскольку разработчики озаботились доступом программ к данным пользователя. А если у нас среда разработки (IDE), то ей нужно примерно всё, поэтому люди и мучаются с решением проблем доступа.</li>
+<li>Во flatpak далеко не все программы &ndash; это как с магазином приложений: он полезен ровно настолько, насколько много в нём приложений. А есть масса полезных небольших программ, которые, я уверен никогда во flatpak не попадут.</li>
+<li>У flatpak временами крайне странные зависимости: так, чтобы установить emacs, тянется примерно гигабайт ещё какой-то пурги.</li>
+</ul>
+<p>Дома мне жалко оперативки, чтобы всё ставить из flatpak, тем более в Fedora достаточно свежие версии того же Telegram и emacs, но если у вас рабочий комп с избытком оперативной памяти, вроде как можно сэкономить время, просто поставив flatpak.</p>
+<p>И тут возникает следующий вопрос: а зачем вообще давать пользователям возможность ставить deb/rpm? Ведь если этого не делать:</p>
+<ul>
+<li>Можно качественно оттестировать "образ" операционной системы, при том, что он может быть собран с достаточно агрессивными (как в Clear Linux) флагами оптимизации под процессоры.</li>
+<li>Можно обновлять образ целиком, как будто это единый файл, которым можно управлять через систему контроля версий: достаточно скачать разницу к предыдущему образу.</li>
+<li>Можно гарантировать, что ни пользователь, ни программы ничего в этом образе не нарушат.</li>
+</ul>
+<p>Так и появились Fedora Silverblue, Clear Linux и другие. Но если в Clear Linux ребята ориентируются только на flatpak, то в Fedora понимают, что людям может быть нужен разный софт, и надо дать больше возможностей его устанавливать. Пожалуйста:</p>
+<ul>
+<li>rpm-ostree &ndash; добавляет любой rpm на слой сверху операционной системы; но после установки надо перезагружаться (ой)</li>
+<li>toolbox &ndash; устанавливай любые программы фактически в контейнер; правда, нужно войти в контейнер, чтобы ими пользоваться</li>
+</ul>
+<p>И тут возникает вопрос: если у меня Fedora, то зачем мне это всё, если у меня и так всё работает? Если отнять необходимость (или прихоть) постоянной установки программ, а представить, что у нас есть типовой образ пользователя (работа с офисными приложениями, разработка python, аналитик данных и т.п.), то вполне можно пользоваться: работать всё будет быстрее и стабильнее, и обновляться тоже будет быстрее. Относительно Ubuntu, в которой, как не старались, то тут, то там что-то вылезает, это выглядит реальным шагом вперёд. И этот качественный прогрессивный переход позволяет решить главное противоречие, которое для Ubuntu стало больными граблями: обновляться чаще на последние версии программ,  но при этом иметь стабильную систему. А вот сама Ubuntu, насколько мне известно, в этом направлении так и не продвинулась.</p>
+<p>Ссылки по теме:</p>
+<ul>
+<li><a href="https://silverblue.fedoraproject.org/">Fedora Silverblue</a></li>
+<li><a href="https://clearlinux.org/">Clear Linux</a></li>
+<li><a href="https://linuxafterdark.net/linux-after-dark-episode-07/">Подкаст</a>, в котором люди подробно описывают свой опыт использования Fedora Silverblue в качестве основной рабочей станции.</li>
+</ul>
+<p>Краткое содержание для тех, кто ничего не понял: будет примерно как Andriod. :)</p>
+            </div>
+            <div class="post_list">
+                <a href="./author/konstantin-ovchinnikov.html">@Константин Овчинников</a> 
+                <span class="post_date">Сб 23 апреля 2022</span>
+                <div><span>Теги: </span>
+                            <span><a href="./tag/linux.html">#linux </a></span>
+                </div>
+            </div>
+                <div class="comments">
+                    <h2>Комментарии</h2>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_identifier = "2022-04-linux-5.html";
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'https://realchanges.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] ||
+                            document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+	  Создано с помощью <a href="http://getpelican.com/">Pelican</a>, 
+      тема <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> от <a href="https://parbhatpuri.com/">@parbhat</a>, иконки с <a href="https://icons8.com/">icon8</a>. РФ 12+.
+        </p>
+    </footer>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-44909202-3']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>
