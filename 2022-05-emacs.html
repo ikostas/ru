@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru" itemscope itemtype="http://schema.org/Person">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>Emacs как ветвь эволюции</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Константин Овчинников">
+
+        <link rel="shortcut icon" href="/theme/images/logo3.ico">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Настоящие изменения">
+        <meta itemprop="image" content="/theme/images/logo3_small.png">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Настоящие изменения ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="ikostas2">
+        <meta name="twitter:image" content="">
+
+
+    <meta name="twitter:creator" content="ikostas2">
+    <meta name="twitter:url" content="./2022-05-emacs.html">
+    <meta name="twitter:title" content="Настоящие изменения ~ Emacs как ветвь эволюции">
+    <meta name="twitter:description" content="Org-mode и чем его заменить">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Настоящие изменения ~ Emacs как ветвь эволюции"/>
+    <meta property="og:description" content="Org-mode и чем его заменить"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <h1><a class="sitetitle" href=".">Настоящие изменения</a></h1>
+        <p>Страница Константина Овчинникова</p>
+		<p>
+        <a href="."><img alt="Home" id="avatar" src="/theme/images/logo3_small.png"></a>
+    <!-- Site search -->
+<script async src="https://cse.google.com/cse.js?cx=83e5897c79a72ea3d"></script>
+<div class="gcse-search"></div>
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+                <li><a class="nav__link" href="https://kovchinnikov.info">Блог</a></li>
+                <li><a class="nav__link" href="https://kovchinnikov.info/tags.html">Темы записей блога</a></li>
+
+                <li><a class="nav__link" href="./pages/main.html">Статьи и инструменты</a></li>
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/ikostas2" target="_blank"><img alt="Twitter"
+                        src="./theme/images/icons/twitter.png"></a>
+                <a href="https://facebook.com/bizrealchanges/" target="_blank"><img alt="Facebook"
+                        src="./theme/images/icons/facebook.png"></a>
+                <a href="https://www.linkedin.com/in/konstantinovchinnikov/" target="_blank"><img alt="LinkedIn"
+                        src="./theme/images/icons/linkedin.png"></a>
+                <a href="https://www.youtube.com/channel/UCSWV-jXlrnxIMbAD-82_USg" target="_blank"><img alt="YouTube"
+                        src="./theme/images/icons/youtube.png"></a>
+                <a href="https://news.google.com/publications/CAAqBwgKMNDclQsw0_6sAw?oc=3&ceid=RU:ru" target="_blank"><img alt="GoogleNews"
+                        src="./theme/images/icons/googlenews.png"></a>
+                <a href="https://github.com/ikostas/" target="_blank"><img alt="GitHub"
+                        src="./theme/images/icons/github.png"></a>
+            <a href="./feeds/all.atom.xml" rel="alternate">
+                <img alt="RSS" src="./theme/images/icons/rss.png"></a>
+    </p>
+
+
+
+</aside>
+
+<!-- Content -->
+<article>
+
+    <section id="content">
+        <article>
+<!--End mc_embed_signup-->
+
+            <h2 class="post_title post_detail"><a href="./2022-05-emacs.html" rel="bookmark" title="Permalink to Emacs как ветвь эволюции">Emacs как ветвь эволюции</a></h2>
+            <div class="entry-content blog-post">
+                <p>Поскольку "надо жить так, чтобы было о чём написать в блоге", последние 3 месяца я использовал Emacs в org-mode для управления задачами. В итоге я выбрал vim+vimwiki, но тут надо сделать несколько дисклеймеров:</p>
+<ul>
+<li>Я использовал emacs и ранее, и, возможно, даже написал в нём несколько курсовых работ в LaTeX; это было настолько давно, что я уже и не помню (возможно, около 1999-2003-го года)</li>
+<li>Цель этой статьи не в том, чтобы указать на недостатки emacs, но, скорее, ответить на вопросы "кому он может быть полезен" и "какие есть современные инструменты для того, что есть в Emacs"</li>
+<li>Я не программирую, последнее время даже не пишу в LaTeX</li>
+</ul>
+<p>Хотелось бы не набрасывать на вентилятор, а разобрать системно:</p>
+<ul>
+<li>UI/UX</li>
+<li>функциональность управления задачами</li>
+</ul>
+<h3>UI/UX</h3>
+<p>С точки зрения того, как Emacs выглядит, поражает обилие цветов и расцветок. Точнее, поражает не это, а отсутствие чувства меры при создании цветовых схем, а также при использовании подчёркиваний и шрифтов разных размеров. Например, в типографии подчёркивание считается моветоном (и на этом сайте именно по этой причине оно появляется только при наведении). В терминале подчёркивание выглядит ещё терпимо, но почему-то именно в графической версии Emacs оно напрягает. Наверное, можно его отключить, как я отключил использование жирного шрифта; и в целом тут плюс в том, что каждый может сделать, как хочет.</p>
+<p>С точки зрения работы, после vim возникает ровно один вопрос: почему для тех же самых действий нужно использовать в 2-6 раз больше нажатий на клавиши? И дело не только в лени: каждое нажатие увеличивает вероятность ошибки, и если где-то в цепочке нажатий ты ошибся &ndash; начинай сначала. На это современный Emacs отвечает: ну так у нас есть evil-mode, который изображает vim идеально. И вот тут начинается проблема, поскольку вся документация на все режимы оказывается не применима с включением evil-mode. Более того, как в режиме вставки, так и в режиме команд продолжают действовать все сочетания клавиш Emacs, от чего крыша начинает несколько ехать. </p>
+<p>Если брать org-mode, то нажатий в vimwiki как-то резко меньше:</p>
+<ul>
+<li>Enter, чтобы открыть ссылку &ndash; вместо C-c C-o в Emacs</li>
+<li>+, чтобы добавить ссылку, вместо C-c C-l в Emacs</li>
+</ul>
+<p>И всё же vimwiki некорректно сравнивать с org-mode, который может делать вообще всё, например:</p>
+<ul>
+<li>показывать повестку дня, то есть задачи на конкретный день</li>
+<li>документировать программный код и конфиги, сразу же их выполнять или создавать конфиги на основе файла org</li>
+</ul>
+<p>Этого я просто не делаю, зато задачами очень даже управляю, и тут я хотел бы рассмотреть набор современных инструментов для управления задачами, которые позволяют мне обходиться очень скромным функционалом vimwiki. Но пойдём мы не от функциональности, а сделаем шаг назад и рассмотрим потребности.</p>
+<h3>Функциональность управления задачами</h3>
+<p>Что сейчас необходимо для эффективного управления своими задачами:</p>
+<ul>
+<li>Видеть задачи на разных устройствах, чтобы проверить / дописать</li>
+<li>Работать с задачами совместно с другими людьми</li>
+</ul>
+<p>В общем, на этом можно было бы закончить, чтобы понять, почему Emacs популярен среди учёных. Если ты делаешь изолированное исследование, и тебе всегда доступен компьютер с Emacs, можно ничего не изобретать. Но если ты в современной турбулентной среде, которая вынуждает тебя быть гибким и быстрым, то ты будешь использовать:</p>
+<ul>
+<li>Для себя: Google Keep или DropBox Paper (да, там есть возможность призвать кого-то, я в курсе)</li>
+<li>Для других: трекеры, то есть систему управления задачами, + wiki</li>
+</ul>
+<p>В связи с тем, что реально большие объёмы информации я храню именно в серверных приложениях, которые доступны всем, в vimwiki остаётся только структурированный набор ссылок на задачи в трекере / страницы на wiki, и выглядит у меня этот файл <strong>вообще всего</strong> крайне небольшим. И тут мы приходим к структуре.</p>
+<p>Когда первый раз увидел org-mode, у меня последовательно возникло ровно две мысли:</p>
+<ul>
+<li>Да они же заново изобрели Markdown!</li>
+<li>Да они же изобрели его, наверное, до Markdown!</li>
+</ul>
+<p>И когда думаешь о Markdown, то поражаешься, зачем заново изобретать, с одной стороны, разметку, которая будет понятна всем, а с другой инструменты экспорта из этой разметки во все типовые средства публикации: pdf, html, LaTeX и т.п. Причём тут люди угарают по хардкору, они не перегоняют содержимое org файлов в markdown, чтобы потом использовать стандартные инструменты (то есть свести задачу к предыдущей), а заново пишут экспорт для каждого формата.</p>
+<p>Тут, наверное, можно возразить, что у org-mode есть развитая функциональность TODO, которая позволяет собирать повестку из многих файлов, накладывать её на календарь, а нигде такого нет. Но если в тексте мне нужно что-то поправить, то я просто оставлю TODO, FIXME или ещё какое-то условное слово, по которому буду потом искать, и которое будет видно в окончательной вёрстке. А если мы говорим о календаре, то я, как жалкий раб Google, использую Google календарь или другие календари, в которых можно:</p>
+<ul>
+<li>Назначать встречи, а не только просматривать свои задачи</li>
+<li>Добавлять ко встречам ссылки на Zoom</li>
+<li>Добавлять повестку, которую будут видеть все, и использовать ссылку на встречу</li>
+</ul>
+<p>Тут, в общем, человечество пришло к выводу, что вместе лучше, чем по одному, это кардинально поднимает продуктивность работы (кроме назначения бесполезных встреч). Надеюсь, никто не будет допиливать в org-mode возможности совместной работы.</p>
+<h3>Выводы</h3>
+<p>Я видел лекции на YouTube, где учёные рассказывали, как одновременно в одном файле org:</p>
+<ul>
+<li>Исполняют программный код</li>
+<li>Просматривают графики и вложенные файлы</li>
+<li>Публикуют всё это на сайте</li>
+</ul>
+<p>Да, наверное, в качестве комбайна, которому нужно всё, замены Emacs нет. Лично я не делал таких сложных формул, и у меня другой workflow: сначала всё набрать, а потом проверить. И то, что весь этот функционал доступен абсолютно бесплатно в единой среде, конечно, поражает воображение. Наверное, сейчас я думаю, что перешёл к vim, но это лишь стадия развития, и когда-нибудь вернусь на Emacs. Но хочется надеяться, что это произойдёт из-за потребностей, которые объективно нельзя решить другими способами, а не из фетишизма или желания не выходить из кокона.</p>
+            </div>
+            <div class="post_list">
+                <a href="./author/konstantin-ovchinnikov.html">@Константин Овчинников</a> 
+                <span class="post_date">Пн 02 мая 2022</span>
+                <div><span>Теги: </span>
+                            <span><a href="./tag/product-management.html">#product management </a></span>
+                </div>
+            </div>
+                <div class="comments">
+                    <h2>Комментарии</h2>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_identifier = "2022-05-emacs.html";
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'https://realchanges.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] ||
+                            document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+	  Создано с помощью <a href="http://getpelican.com/">Pelican</a>, 
+      тема <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> от <a href="https://parbhatpuri.com/">@parbhat</a>, иконки с <a href="https://icons8.com/">icon8</a>. РФ 12+.
+        </p>
+    </footer>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-44909202-3']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>
