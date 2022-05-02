@@ -117,10 +117,10 @@
 </code></pre></div>
 
 <p>Ну и остаётся найти, где находится telega.el, и прописать путь в config.el:</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">use</span><span class="o">-</span><span class="n">package</span> <span class="n">telega</span>
-  <span class="p">:</span><span class="nb">load</span><span class="o">-</span><span class="n">path</span>  <span class="s2">&quot;~/.emacs.d/.local/straight/build-27.2/telega/telega.el&quot;</span>
-  <span class="p">:</span><span class="n">commands</span> <span class="p">(</span><span class="n">telega</span><span class="p">)</span>
-  <span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">use</span><span class="o">-</span><span class="n">package</span><span class="w"> </span><span class="n">telega</span><span class="w"></span>
+<span class="w">  </span><span class="p">:</span><span class="nb">load</span><span class="o">-</span><span class="n">path</span><span class="w">  </span><span class="s2">&quot;~/.emacs.d/.local/straight/build-27.2/telega/telega.el&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">:</span><span class="n">commands</span><span class="w"> </span><span class="p">(</span><span class="n">telega</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>После этого всё должно работать, запускается в Emacs с помощью Alt+X и дальше telega. :)</p>
