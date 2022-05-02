@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru" itemscope itemtype="http://schema.org/Person">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>Debian дома</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Константин Овчинников">
+
+        <link rel="shortcut icon" href="/theme/images/logo3.ico">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Настоящие изменения">
+        <meta itemprop="image" content="/theme/images/logo3_small.png">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Настоящие изменения ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="ikostas2">
+        <meta name="twitter:image" content="">
+
+
+    <meta name="twitter:creator" content="ikostas2">
+    <meta name="twitter:url" content="./2022-05-debian.html">
+    <meta name="twitter:title" content="Настоящие изменения ~ Debian дома">
+    <meta name="twitter:description" content="Продолжаем искать решение для стабильности и свежести">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Настоящие изменения ~ Debian дома"/>
+    <meta property="og:description" content="Продолжаем искать решение для стабильности и свежести"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <h1><a class="sitetitle" href=".">Настоящие изменения</a></h1>
+        <p>Страница Константина Овчинникова</p>
+		<p>
+        <a href="."><img alt="Home" id="avatar" src="/theme/images/logo3_small.png"></a>
+    <!-- Site search -->
+<script async src="https://cse.google.com/cse.js?cx=83e5897c79a72ea3d"></script>
+<div class="gcse-search"></div>
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+                <li><a class="nav__link" href="https://kovchinnikov.info">Блог</a></li>
+                <li><a class="nav__link" href="https://kovchinnikov.info/tags.html">Темы записей блога</a></li>
+
+                <li><a class="nav__link" href="./pages/main.html">Статьи и инструменты</a></li>
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/ikostas2" target="_blank"><img alt="Twitter"
+                        src="./theme/images/icons/twitter.png"></a>
+                <a href="https://facebook.com/bizrealchanges/" target="_blank"><img alt="Facebook"
+                        src="./theme/images/icons/facebook.png"></a>
+                <a href="https://www.linkedin.com/in/konstantinovchinnikov/" target="_blank"><img alt="LinkedIn"
+                        src="./theme/images/icons/linkedin.png"></a>
+                <a href="https://www.youtube.com/channel/UCSWV-jXlrnxIMbAD-82_USg" target="_blank"><img alt="YouTube"
+                        src="./theme/images/icons/youtube.png"></a>
+                <a href="https://news.google.com/publications/CAAqBwgKMNDclQsw0_6sAw?oc=3&ceid=RU:ru" target="_blank"><img alt="GoogleNews"
+                        src="./theme/images/icons/googlenews.png"></a>
+                <a href="https://github.com/ikostas/" target="_blank"><img alt="GitHub"
+                        src="./theme/images/icons/github.png"></a>
+            <a href="./feeds/all.atom.xml" rel="alternate">
+                <img alt="RSS" src="./theme/images/icons/rss.png"></a>
+    </p>
+
+
+
+</aside>
+
+<!-- Content -->
+<article>
+
+    <section id="content">
+        <article>
+<!--End mc_embed_signup-->
+
+            <h2 class="post_title post_detail"><a href="./2022-05-debian.html" rel="bookmark" title="Permalink to Debian дома">Debian дома</a></h2>
+            <div class="entry-content blog-post">
+                <p>Сижу дома, никого не трогаю; было какое-то странное поведение системы, решил обновиться. Обновилось ядро на 5.17, перезагружаюсь, интернета нет. Ping показывает потерю 70% пакетов и больше. Ищу решение с телефона: увы, сломали совместимость с wi-fi картами одного производителя. Ну что же, теперь мне достоверно известно, что баги в ядре в Fedora случаются раз в 3-4 года.</p>
+<p>С появлением flatpak, который позволяет в любой системе ставить последние версии наиболее используемых мной программ, проблема выбора дистрибутива не стоит так остро. ОК, мне нужно чуть больше стабильности, но я явно не готов мириться с костылями в Ubuntu. Для таких людей давно была CentOS, но она умерла, вместо неё вроде как Rocky Linux. В любом случае, мне нужен дистрибутив с deb или rpm, чтобы подключить принтер и сканер, поэтому если от системы требуется максимальная лёгкость и стабильность, то почему не Debian? </p>
+<p>Вопрос в том, что Gnome не установишь из flatpak, поэтому придётся мириться с Gnome 3, зато с Adwaita &ndash; темой, которую давно пилит RedHat и которая очень хороша. Последний раз, когда я смотрел Debian (кажется, версии 9) там было всё не очень с дизайном, но теперь совсем другое дело. Итак, опишу свой опыт:</p>
+<ol>
+<li>Скачивание образа и установка</li>
+<li>Удаление лишнего</li>
+<li>Добавление нужного</li>
+<li>Разборки с VPN</li>
+</ol>
+<p>До того, как всё это начинать, я составил список программ, которые мне нужны, и убедился, что есть документация по их установке. Чего и вам желаю, поскольку это сильно сокращает время настройки. Также следует учитывать, что это скорее серверный дистрибутив, и нехватка отдельных моментов, нужных пользователю, прям явно заметна, но в большинстве случаев это решается установкой программ. А вот в случае VPN и Network Manager лично у меня так не получилось.</p>
+<h3>Скачивание образа и установка</h3>
+<p>Это два этапа, на которых многие ломаются, начинают плакать, называть Debian плохим дистрибутивом, а также изобретают новые нецензурные выражения. Дело в том, что образ с драйверами в Debian есть, но называется <strong>неофициальным</strong>. Но именно он нам и нужен. Можно записать с помощью Fedora Media Writer, например.</p>
+<p>На моменте разметки диска я застрял минут на 20. Хорошо хоть это был Live образ: можно было подключиться к интернету и посмотреть, в чём там дело. А дело в том, что установщик предложил мне только ручную разбивку диска, при этом, на самом деле он ожидал:</p>
+<ul>
+<li>Выделения 600 Мб под fat32 с точкой монтирования /boot/uefi и установленным флагом boot</li>
+<li>Выделения всего остального под файловую систему на выбор с точкой монтирования /</li>
+</ul>
+<p>Ну это минимально, причём показания различались: где-то было написано, что нужно выделить ещё разделы.</p>
+<h3>Удаление лишнего</h3>
+<p>По какой-то неведомой причине, именно этот образ (а может и все образы) идёт с поддержкой тамильского, традиционного китайского и некоторых других языков, которые... немного захламляют меню выбора программ. Также традиционно я удаляю LibreOffice (предпочитаю WPS) и Thunderbird (можно ничего не ставить, если пользуетесь веб-почтой). Лично я потратил несколько часов на поиски и выпиливание лишнего, ну а вы можете использовать одну команду:</p>
+<div class="highlight"><pre><span></span><code>sudo apt autoremove evolution libreoffice-* thunderbird gnome-games \
+xterm task-thai-desktop xiterm+thai \
+mlterm mlterm-common rhythmbox shotwell gnome-todo \
+mozc-server mozc-data mozc-utils-gui fcitx*
+</code></pre></div>
+
+<h3>Добавление нужного</h3>
+<p>Сначала поставим то, что можно поставить из deb:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install gnome-tweaks vim geary deja-dup git gthumb
+</code></pre></div>
+
+<p>Но если вы используете бэкап на Google Drive, вам понадобится ещё пара команд:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install python3-pip
+pip install PyDrive
+</code></pre></div>
+
+<p>Дальше <a href="https://flatpak.org/setup/Debian">подключаем flatpak</a> и ставим:</p>
+<div class="highlight"><pre><span></span><code>flatpak install wps telegram
+</code></pre></div>
+
+<p>Ну и для примера &ndash; что мне нужно поставить, чтобы поднять pelican (генератор этого сайта):</p>
+<div class="highlight"><pre><span></span><code>sudo apt install python3 python3-venv virtualenv python3-virtualenv
+</code></pre></div>
+
+<p>Создаём виртуальную переменную и ставим в неё:</p>
+<div class="highlight"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="ss">&quot;pelican[markdown]&quot;</span><span class="w"> </span><span class="n">pelican</span><span class="o">-</span><span class="n">tag</span><span class="o">-</span><span class="n">cloud</span><span class="w"> </span><span class="n">pelican</span><span class="o">-</span><span class="n">sitemap</span><span class="w"></span>
+</code></pre></div>
+
+<p>Ну и дальше уже на вкус, я ставлю из deb Chrome, Zoom, Minecraft. Для Minecraft ставлю Oracle JRE. Кстати, для Minecraft тоже есть flatpak, но на самом деле это же java, то есть получается контейнер (java) в контейнере (flatpak), поэтому, на мой взгляд, смысла не имеет.</p>
+<h3>Разборки с VPN</h3>
+<p>И тут при подключении к VPN меня ждал облом:</p>
+<ol>
+<li>OpenVPN плагин к Network Manager не установлен по умолчанию; не страшно, ставим</li>
+<li>Импортируем конфиг, не работает: смотрим логи, не хватает прав</li>
+<li>Ищем решение, его нет: запускайте openvpn из командной строки; причём отваливается периодически, можете откатываться на предыдущую версию openvpn</li>
+</ol>
+<p>Но для запуска из командной строки нужны права root + каждый раз вводить логи и пароль. Это ещё ничего, я пробовал IPSEC, там ошибку просмотра конфига сразу выдаёт. Это ровно то, что я называю "серверный дистрибутив" &ndash; очевидно, в это место никто даже не заглядывал. И пришлось сделать на основе <a href="https://openvpn.net/cloud-docs/openvpn-3-client-for-linux/">openvpn3</a>:</p>
+<p>Сначала прописываем в конфиге (.ovpn) </p>
+<div class="highlight"><pre><span></span><code>auth-user-pass login.conf
+</code></pre></div>
+
+<p>А в этом файле login.conf прописываем логин и пароль для vpn. Затем загружаем файл:</p>
+<div class="highlight"><pre><span></span><code><span class="n">openvpn3</span> <span class="n">config</span><span class="o">-</span><span class="kn">import</span> <span class="o">--</span><span class="n">config</span> <span class="n">openvpn</span><span class="o">.</span><span class="n">ovpn</span> <span class="o">--</span><span class="n">persistent</span>
+</code></pre></div>
+
+<p>И отключаем ipv6 (в моём случае):</p>
+<div class="highlight"><pre><span></span><code>openvpn3 config-manage --config openvpn.ovpn --ipv6 no
+</code></pre></div>
+
+<p>А после этого добавляем 3 alias в .bashrc:</p>
+<div class="highlight"><pre><span></span><code>alias vpn-start=&quot;openvpn3 session-start --config openvpn.ovpn&quot;
+alias vpn-stop=&quot;openvpn3 session-manage -D --config openvpn.ovpn&quot;
+alias vpn-status=&quot;openvpn3 sessions-list&quot;
+</code></pre></div>
+
+<p>Нельзя сказать, что это костыль, всё работает, но в общем, вы поняли.</p>
+            </div>
+            <div class="post_list">
+                <a href="./author/konstantin-ovchinnikov.html">@Константин Овчинников</a> 
+                <span class="post_date">Пн 02 мая 2022</span>
+                <div><span>Теги: </span>
+                            <span><a href="./tag/linux.html">#linux </a></span>
+                </div>
+            </div>
+                <div class="comments">
+                    <h2>Комментарии</h2>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_identifier = "2022-05-debian.html";
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'https://realchanges.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] ||
+                            document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+	  Создано с помощью <a href="http://getpelican.com/">Pelican</a>, 
+      тема <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> от <a href="https://parbhatpuri.com/">@parbhat</a>, иконки с <a href="https://icons8.com/">icon8</a>. РФ 12+.
+        </p>
+    </footer>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-44909202-3']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>

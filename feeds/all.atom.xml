@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Настоящие изменения</title><link href="https://kovchinnikov.info/" rel="alternate"></link><link href="https://kovchinnikov.info/feeds/all.atom.xml" rel="self"></link><id>https://kovchinnikov.info/</id><updated>2022-09-02T11:44:00+03:00</updated><subtitle>Страница Константина Овчинникова</subtitle><entry><title>Emacs как ветвь эволюции</title><link href="https://kovchinnikov.info/2022-05-emacs.html" rel="alternate"></link><published>2022-05-02T20:46:00+03:00</published><updated>2022-05-02T20:46:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-05-02:/2022-05-emacs.html</id><summary type="html">&lt;p&gt;Org-mode и чем его заменить&lt;/p&gt;</summary><content type="html">&lt;p&gt;Поскольку "надо жить так, чтобы было о чём написать в блоге", последние 3 месяца я использовал Emacs в org-mode для управления задачами. В итоге я выбрал vim+vimwiki, но тут надо сделать несколько дисклеймеров:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Настоящие изменения</title><link href="https://kovchinnikov.info/" rel="alternate"></link><link href="https://kovchinnikov.info/feeds/all.atom.xml" rel="self"></link><id>https://kovchinnikov.info/</id><updated>2022-09-02T11:44:00+03:00</updated><subtitle>Страница Константина Овчинникова</subtitle><entry><title>Debian дома</title><link href="https://kovchinnikov.info/2022-05-debian.html" rel="alternate"></link><published>2022-05-02T22:27:00+03:00</published><updated>2022-05-02T22:27:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-05-02:/2022-05-debian.html</id><summary type="html">&lt;p&gt;Продолжаем искать решение для стабильности и свежести&lt;/p&gt;</summary><content type="html">&lt;p&gt;Сижу дома, никого не трогаю; было какое-то странное поведение системы, решил обновиться. Обновилось ядро на 5.17, перезагружаюсь, интернета нет. Ping показывает потерю 70% пакетов и больше. Ищу решение с телефона: увы, сломали совместимость с wi-fi картами одного производителя. Ну что же, теперь мне достоверно известно, что баги в ядре в Fedora случаются раз в 3-4 года.&lt;/p&gt;
+&lt;p&gt;С появлением flatpak, который позволяет в любой системе ставить последние версии наиболее используемых мной программ, проблема выбора дистрибутива не стоит так остро. ОК, мне нужно чуть больше стабильности, но я явно не готов мириться с костылями в Ubuntu. Для таких людей давно была CentOS, но она умерла, вместо неё вроде как Rocky Linux. В любом случае, мне нужен дистрибутив с deb или rpm, чтобы подключить принтер и сканер, поэтому если от системы требуется максимальная лёгкость и стабильность, то почему не Debian? &lt;/p&gt;
+&lt;p&gt;Вопрос в том, что Gnome не установишь из flatpak, поэтому придётся мириться с Gnome 3, зато с Adwaita &amp;ndash; темой, которую давно пилит RedHat и которая очень хороша. Последний раз, когда я смотрел Debian (кажется, версии 9) там было всё не очень с дизайном, но теперь совсем другое дело. Итак, опишу свой опыт:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Скачивание образа и установка&lt;/li&gt;
+&lt;li&gt;Удаление лишнего&lt;/li&gt;
+&lt;li&gt;Добавление нужного&lt;/li&gt;
+&lt;li&gt;Разборки с VPN&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;До того, как всё это начинать, я составил список программ, которые мне нужны, и убедился, что есть документация по их установке. Чего и вам желаю, поскольку это сильно сокращает время настройки. Также следует учитывать, что это скорее серверный дистрибутив, и нехватка отдельных моментов, нужных пользователю, прям явно заметна, но в большинстве случаев это решается установкой программ. А вот в случае VPN и Network Manager лично у меня так не получилось.&lt;/p&gt;
+&lt;h3&gt;Скачивание образа и установка&lt;/h3&gt;
+&lt;p&gt;Это два этапа, на которых многие ломаются, начинают плакать, называть Debian плохим дистрибутивом, а также изобретают новые нецензурные выражения. Дело в том, что образ с драйверами в Debian есть, но называется &lt;strong&gt;неофициальным&lt;/strong&gt;. Но именно он нам и нужен. Можно записать с помощью Fedora Media Writer, например.&lt;/p&gt;
+&lt;p&gt;На моменте разметки диска я застрял минут на 20. Хорошо хоть это был Live образ: можно было подключиться к интернету и посмотреть, в чём там дело. А дело в том, что установщик предложил мне только ручную разбивку диска, при этом, на самом деле он ожидал:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Выделения 600 Мб под fat32 с точкой монтирования /boot/uefi и установленным флагом boot&lt;/li&gt;
+&lt;li&gt;Выделения всего остального под файловую систему на выбор с точкой монтирования /&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ну это минимально, причём показания различались: где-то было написано, что нужно выделить ещё разделы.&lt;/p&gt;
+&lt;h3&gt;Удаление лишнего&lt;/h3&gt;
+&lt;p&gt;По какой-то неведомой причине, именно этот образ (а может и все образы) идёт с поддержкой тамильского, традиционного китайского и некоторых других языков, которые... немного захламляют меню выбора программ. Также традиционно я удаляю LibreOffice (предпочитаю WPS) и Thunderbird (можно ничего не ставить, если пользуетесь веб-почтой). Лично я потратил несколько часов на поиски и выпиливание лишнего, ну а вы можете использовать одну команду:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt autoremove evolution libreoffice-* thunderbird gnome-games \
+xterm task-thai-desktop xiterm+thai \
+mlterm mlterm-common rhythmbox shotwell gnome-todo \
+mozc-server mozc-data mozc-utils-gui fcitx*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Добавление нужного&lt;/h3&gt;
+&lt;p&gt;Сначала поставим то, что можно поставить из deb:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install gnome-tweaks vim geary deja-dup git gthumb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Но если вы используете бэкап на Google Drive, вам понадобится ещё пара команд:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install python3-pip
+pip install PyDrive
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Дальше &lt;a href="https://flatpak.org/setup/Debian"&gt;подключаем flatpak&lt;/a&gt; и ставим:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;flatpak install wps telegram
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ну и для примера &amp;ndash; что мне нужно поставить, чтобы поднять pelican (генератор этого сайта):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install python3 python3-venv virtualenv python3-virtualenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Создаём виртуальную переменную и ставим в неё:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;pelican[markdown]&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cloud&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;sitemap&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ну и дальше уже на вкус, я ставлю из deb Chrome, Zoom, Minecraft. Для Minecraft ставлю Oracle JRE. Кстати, для Minecraft тоже есть flatpak, но на самом деле это же java, то есть получается контейнер (java) в контейнере (flatpak), поэтому, на мой взгляд, смысла не имеет.&lt;/p&gt;
+&lt;h3&gt;Разборки с VPN&lt;/h3&gt;
+&lt;p&gt;И тут при подключении к VPN меня ждал облом:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;OpenVPN плагин к Network Manager не установлен по умолчанию; не страшно, ставим&lt;/li&gt;
+&lt;li&gt;Импортируем конфиг, не работает: смотрим логи, не хватает прав&lt;/li&gt;
+&lt;li&gt;Ищем решение, его нет: запускайте openvpn из командной строки; причём отваливается периодически, можете откатываться на предыдущую версию openvpn&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Но для запуска из командной строки нужны права root + каждый раз вводить логи и пароль. Это ещё ничего, я пробовал IPSEC, там ошибку просмотра конфига сразу выдаёт. Это ровно то, что я называю "серверный дистрибутив" &amp;ndash; очевидно, в это место никто даже не заглядывал. И пришлось сделать на основе &lt;a href="https://openvpn.net/cloud-docs/openvpn-3-client-for-linux/"&gt;openvpn3&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Сначала прописываем в конфиге (.ovpn) &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;auth-user-pass login.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;А в этом файле login.conf прописываем логин и пароль для vpn. Затем загружаем файл:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;openvpn3&lt;/span&gt; &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt; &lt;span class="n"&gt;openvpn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ovpn&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;persistent&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;И отключаем ipv6 (в моём случае):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;openvpn3 config-manage --config openvpn.ovpn --ipv6 no
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;А после этого добавляем 3 alias в .bashrc:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;alias vpn-start=&amp;quot;openvpn3 session-start --config openvpn.ovpn&amp;quot;
+alias vpn-stop=&amp;quot;openvpn3 session-manage -D --config openvpn.ovpn&amp;quot;
+alias vpn-status=&amp;quot;openvpn3 sessions-list&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Нельзя сказать, что это костыль, всё работает, но в общем, вы поняли.&lt;/p&gt;</content><category term="blog"></category><category term="linux"></category></entry><entry><title>Emacs как ветвь эволюции</title><link href="https://kovchinnikov.info/2022-05-emacs.html" rel="alternate"></link><published>2022-05-02T20:46:00+03:00</published><updated>2022-05-02T20:46:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-05-02:/2022-05-emacs.html</id><summary type="html">&lt;p&gt;Org-mode и чем его заменить&lt;/p&gt;</summary><content type="html">&lt;p&gt;Поскольку "надо жить так, чтобы было о чём написать в блоге", последние 3 месяца я использовал Emacs в org-mode для управления задачами. В итоге я выбрал vim+vimwiki, но тут надо сделать несколько дисклеймеров:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Я использовал emacs и ранее, и, возможно, даже написал в нём несколько курсовых работ в LaTeX; это было настолько давно, что я уже и не помню (возможно, около 1999-2003-го года)&lt;/li&gt;
 &lt;li&gt;Цель этой статьи не в том, чтобы указать на недостатки emacs, но, скорее, ответить на вопросы "кому он может быть полезен" и "какие есть современные инструменты для того, что есть в Emacs"&lt;/li&gt;

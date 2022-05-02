@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/</loc>
-<lastmod>2022-05-02T21:38:01-00:00</lastmod>
+<lastmod>2022-05-02T23:55:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -13,6 +13,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/pages/main.html</loc>
 <lastmod>2021-07-09T21:48:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/2022-05-debian.html</loc>
+<lastmod>2022-05-02T22:27:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -711,6 +718,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://kovchinnikov.info/tag/linux.html</loc>
+<lastmod>2022-09-02T11:44:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://kovchinnikov.info/tag/product-management.html</loc>
 <lastmod>2022-05-02T20:46:00+02:30</lastmod>
 <changefreq>daily</changefreq>
@@ -720,13 +734,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/tag/upravlenie-proektom.html</loc>
 <lastmod>2022-05-02T19:24:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kovchinnikov.info/tag/linux.html</loc>
-<lastmod>2022-09-02T11:44:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
