@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ru" itemscope itemtype="http://schema.org/Person">
 <head>
-        <meta charset="utf-8">
+            <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>Настоящие изменения - Authors</title>
+        <title>Ограничения ребёнку на интернет</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Константин Овчинников">
@@ -29,6 +29,16 @@
         <meta name="twitter:site" content="ikostas2">
         <meta name="twitter:image" content="">
 
+
+    <meta name="twitter:creator" content="ikostas2">
+    <meta name="twitter:url" content="./2022-05-squid.html">
+    <meta name="twitter:title" content="Настоящие изменения ~ Ограничения ребёнку на интернет">
+    <meta name="twitter:description" content="Используем Squid для ограничений интернета">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Настоящие изменения ~ Ограничения ребёнку на интернет"/>
+    <meta property="og:description" content="Используем Squid для ограничений интернета"/>
+    <meta property="og:image" content=""/>
 </head>
 
 <body>
@@ -77,10 +87,62 @@
 <!-- Content -->
 <article>
 
-    <h1>Authors on Настоящие изменения</h1>
-    <ul>
-        <li><a href="./author/konstantin-ovchinnikov.html">Константин Овчинников</a> (101)</li>
-    </ul>
+    <section id="content">
+        <article>
+<!--End mc_embed_signup-->
+
+            <h2 class="post_title post_detail"><a href="./2022-05-squid.html" rel="bookmark" title="Permalink to Ограничения ребёнку на интернет">Ограничения ребёнку на интернет</a></h2>
+            <div class="entry-content blog-post">
+                <p>Дано: комп на linux.</p>
+<p>Что требуется:</p>
+<ul>
+<li>Ввести ограничения на использование Интернетика с 18 до 21</li>
+<li>Оставить использование дневника, который использует большое количество сайтов на mos.ru</li>
+</ul>
+<p>Что интересно, в linux:</p>
+<ul>
+<li>время обычный пользователь изменить не может</li>
+<li>а вот настройки proxy может, если знает, где</li>
+<li>на локальном компе достаточно сложно закрыть порты, кроме того, который используется для proxy, поэтому рекомендуется внутренний firewall</li>
+</ul>
+<p>Устанавливаем squid и прописываем в конфиг:</p>
+<div class="highlight"><pre><span></span><code>acl kidstime time SMTWHFA 18:00-21:00
+acl kids src &lt;ip address&gt;
+acl dnevnik dstdomain .mos.ru
+</code></pre></div>
+
+<p>И чуть ниже </p>
+<div class="highlight"><pre><span></span><code>http_access allow kids kidstime
+http_access allow dnevnik
+http_access deny kids !kidstime
+</code></pre></div>
+
+<p>Вот и всё, ничего особенного.</p>
+            </div>
+            <div class="post_list">
+                <a href="./author/konstantin-ovchinnikov.html">@Константин Овчинников</a> 
+                <span class="post_date">Пн 09 мая 2022</span>
+                <div><span>Теги: </span>
+                            <span><a href="./tag/linux.html">#linux </a></span>
+                </div>
+            </div>
+                <div class="comments">
+                    <h2>Комментарии</h2>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_identifier = "2022-05-squid.html";
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'https://realchanges.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] ||
+                            document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                </div>
+        </article>
+    </section>
 </article>
 
 <!-- Footer -->
