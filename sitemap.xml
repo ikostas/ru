@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/</loc>
-<lastmod>2022-05-10T11:00:43-00:00</lastmod>
+<lastmod>2022-05-11T23:27:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -13,6 +13,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/pages/main.html</loc>
 <lastmod>2021-07-09T21:48:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/2022-05-project-3.html</loc>
+<lastmod>2022-05-11T22:41:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/2022-05-kb.html</loc>
+<lastmod>2022-05-11T19:22:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -75,7 +89,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/2022-04-linux-2.html</loc>
-<lastmod>2022-09-10T11:44:00+03:00</lastmod>
+<lastmod>2022-09-11T11:44:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -726,21 +740,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/category/blog.html</loc>
-<lastmod>2022-09-10T11:44:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://kovchinnikov.info/tag/linux.html</loc>
-<lastmod>2022-09-10T11:44:00+02:30</lastmod>
+<lastmod>2022-09-11T11:44:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/tag/upravlenie-proektom.html</loc>
-<lastmod>2022-05-09T14:16:00+02:30</lastmod>
+<lastmod>2022-05-11T22:41:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/tag/linux.html</loc>
+<lastmod>2022-09-11T11:44:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1041,7 +1055,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/author/konstantin-ovchinnikov.html</loc>
-<lastmod>2022-09-10T11:44:00+02:30</lastmod>
+<lastmod>2022-09-11T11:44:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
