@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru" itemscope itemtype="http://schema.org/Person">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>Рабочий процесс обычного человека и emacs'ера</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Константин Овчинников">
+
+        <link rel="shortcut icon" href="/theme/images/logo3.ico">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Настоящие изменения">
+        <meta itemprop="image" content="/theme/images/logo3_small.png">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Настоящие изменения ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="ikostas2">
+        <meta name="twitter:image" content="">
+
+
+    <meta name="twitter:creator" content="ikostas2">
+    <meta name="twitter:url" content="./2022-06-linux-workflow.html">
+    <meta name="twitter:title" content="Настоящие изменения ~ Рабочий процесс обычного человека и emacs'ера">
+    <meta name="twitter:description" content="Покоряем новые высоты продуктивности">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Настоящие изменения ~ Рабочий процесс обычного человека и emacs'ера"/>
+    <meta property="og:description" content="Покоряем новые высоты продуктивности"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <h1><a class="sitetitle" href=".">Настоящие изменения</a></h1>
+        <p>Страница Константина Овчинникова</p>
+		<p>
+        <a href="."><img alt="Home" id="avatar" src="/theme/images/logo3_small.png"></a>
+    <!-- Site search -->
+<script async src="https://cse.google.com/cse.js?cx=83e5897c79a72ea3d"></script>
+<div class="gcse-search"></div>
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+                <li><a class="nav__link" href="https://kovchinnikov.info">Блог</a></li>
+                <li><a class="nav__link" href="https://kovchinnikov.info/tags.html">Темы записей блога</a></li>
+
+                <li><a class="nav__link" href="./pages/main.html">Статьи и инструменты</a></li>
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/ikostas2" target="_blank"><img alt="Twitter"
+                        src="./theme/images/icons/twitter.png"></a>
+                <a href="https://facebook.com/bizrealchanges/" target="_blank"><img alt="Facebook"
+                        src="./theme/images/icons/facebook.png"></a>
+                <a href="https://www.linkedin.com/in/konstantinovchinnikov/" target="_blank"><img alt="LinkedIn"
+                        src="./theme/images/icons/linkedin.png"></a>
+                <a href="https://www.youtube.com/channel/UCSWV-jXlrnxIMbAD-82_USg" target="_blank"><img alt="YouTube"
+                        src="./theme/images/icons/youtube.png"></a>
+                <a href="https://news.google.com/publications/CAAqBwgKMNDclQsw0_6sAw?oc=3&ceid=RU:ru" target="_blank"><img alt="GoogleNews"
+                        src="./theme/images/icons/googlenews.png"></a>
+                <a href="https://github.com/ikostas/" target="_blank"><img alt="GitHub"
+                        src="./theme/images/icons/github.png"></a>
+            <a href="./feeds/all.atom.xml" rel="alternate">
+                <img alt="RSS" src="./theme/images/icons/rss.png"></a>
+    </p>
+
+
+
+</aside>
+
+<!-- Content -->
+<article>
+
+    <section id="content">
+        <article>
+<!--End mc_embed_signup-->
+
+            <h2 class="post_title post_detail"><a href="./2022-06-linux-workflow.html" rel="bookmark" title="Permalink to Рабочий процесс обычного человека и emacs'ера">Рабочий процесс обычного человека и emacs'ера</a></h2>
+            <div class="entry-content blog-post">
+                <p>С одной стороны, хотел поделиться тем, как мне живётся на linux на работе: какие решения удалось найти и как выглядит рабочий процесс. С другой стороны, можно представить, как мог бы выглядеть процесс, если бы я остался на Emacs, который позволяет заменить собой часть инструментов.</p>
+<h3>Рабочий процесс обычного человека</h3>
+<p>С самого начала всё выглядит примерно так:</p>
+<ol>
+<li>Автоматически запускаются нужные мне программы; Zoom сразу сворачивается</li>
+<li>Программы размещаются по рабочим столам</li>
+<li>В браузере открываются закрытые вкладки</li>
+<li>В терминале открывается tmux, vim</li>
+<li>В vim с помощью vimwiki открывается список дел</li>
+</ol>
+<h4>Старт программ</h4>
+<p>Во-первых, используем автоматическую загрузку:</p>
+<div style="text-align:center">
+<img src="images/wf-autostart.png" width="800" alt="Автозагрузка">
+</div>
+
+<p>Во-вторых, с помощью расширения размещаем программы по рабочим столам:</p>
+<div style="text-align:center">
+<img src="images/wf-automove.png" width="800" alt="Авторазмещение">
+</div>
+
+<h4>Браузер</h4>
+<p>В браузере больше всего используются внутренние инструменты:</p>
+<ul>
+<li>Почта</li>
+<li>Календарь, Zoom запускается по ссылкам из встреч</li>
+<li>Wiki</li>
+<li>Трекер задач</li>
+</ul>
+<h4>Список задач</h4>
+<p>В чём проблема, так это в том, чтобы держать список задач и пояснения к ним под рукой. Для этого я взял, как мне кажется, самое легковесное решение, vimwiki. Что мне нужно:</p>
+<ul>
+<li>Заголовки разного уровня и в целом форматирование в Markdown</li>
+<li>Ссылки, возможность добавлять ссылки и открывать их минимумом нажатий</li>
+<li>Отмечать статус выполнения задач</li>
+</ul>
+<p>Проблема возникает при переключении между браузером и wiki: часто мне бывает нужно скопировать несколько полей подряд. Помогает <a href="https://extensions.gnome.org/extension/4422/gnome-clipboard/">расширение</a>, которое сохраняет историю буфера обмена. Hotkey на него нет, но меня пока устраивает:</p>
+<div style="text-align:center">
+<img src="images/wf-clipboard.png" width="300" alt="История буфера обмена">
+</div>
+
+<h4>Telegram</h4>
+<p>Установленный из Flatpak продолжает работать:</p>
+<ul>
+<li>Не падает</li>
+<li>Сам обновляется</li>
+<li>Имеет хорошее управление с клавиатуры (неожиданно)</li>
+</ul>
+<h4>Nautilus</h4>
+<p>Стандартный файловый менеджер Gnome имеет для меня ряд преимуществ:</p>
+<ul>
+<li>Recent, то есть последние файлы, причём они появляются в разных диалогах (например, в браузере и Telegram)</li>
+<li>Вкладки</li>
+<li>Переименование файла без расширения по F2</li>
+<li>Цепляет Google Drive, в том числе несколько аккаунтов одновременно</li>
+<li>Поддерживает почти командную строку при нажатии Ctrl+L с автодополнением; там же позволяет копировать путь к файлу</li>
+</ul>
+<h3>Emacs</h3>
+<p>А теперь посмотрим, что из этого мог бы заменить Emacs:</p>
+<ul>
+<li>Почту и календарь никак не заменить, там есть ряд специфичных вещей, связанных с интеграцией с внутренними сервисами</li>
+<li>Браузер тоже не заменить, поскольку внутренние сервисы хорошо перевариваются только Яндекс Браузером</li>
+<li>Список задач, понятное дело, заменяется на org-mode; жить можно</li>
+<li>Telegram можно заменить на Telega.el</li>
+<li>Nautilus можно заменить на Dired</li>
+<li>Картинки и PDF можно открывать внутри, но мне не нравится, как это всё выглядит</li>
+</ul>
+<p>При желании, это всё может быть окнами (буферами в терминах Emacs) внутри Emacs, а в каждом буфере можно использовать все возможности редактирования текста средствами Emacs, что для кого-то будет решающим аргументом. Emacs очень любит создавать окна, но зато обеспечивает неплохие средства поиска среди списка окон.</p>
+<p>Мне кажется, главное &ndash; это возможность выбора. Как и в случае, если вам надоело текущее рабочее окружение.</p>
+            </div>
+            <div class="post_list">
+                <a href="./author/konstantin-ovchinnikov.html">@Константин Овчинников</a> 
+                <span class="post_date">Пн 20 июня 2022</span>
+                <div><span>Теги: </span>
+                            <span><a href="./tag/linux.html">#linux </a></span>
+                            <span><a href="./tag/produktivnost.html">#продуктивность </a></span>
+                </div>
+            </div>
+                <div class="comments">
+                    <h2>Комментарии</h2>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_identifier = "2022-06-linux-workflow.html";
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'https://realchanges.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] ||
+                            document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+	  Создано с помощью <a href="http://getpelican.com/">Pelican</a>, 
+      тема <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> от <a href="https://parbhatpuri.com/">@parbhat</a>, иконки с <a href="https://icons8.com/">icon8</a>. РФ 12+.
+        </p>
+    </footer>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-44909202-3']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>
