@@ -1,5 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Настоящие изменения</title><link href="https://kovchinnikov.info/" rel="alternate"></link><link href="https://kovchinnikov.info/feeds/all.atom.xml" rel="self"></link><id>https://kovchinnikov.info/</id><updated>2022-09-20T11:44:00+03:00</updated><subtitle>Страница Константина Овчинникова</subtitle><entry><title>Рабочий процесс обычного человека и emacs'ера</title><link href="https://kovchinnikov.info/2022-06-linux-workflow.html" rel="alternate"></link><published>2022-06-20T22:59:00+03:00</published><updated>2022-06-20T22:59:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-06-20:/2022-06-linux-workflow.html</id><summary type="html">&lt;p&gt;Покоряем новые высоты продуктивности&lt;/p&gt;</summary><content type="html">&lt;p&gt;С одной стороны, хотел поделиться тем, как мне живётся на linux на работе: какие решения удалось найти и как выглядит рабочий процесс. С другой стороны, можно представить, как мог бы выглядеть процесс, если бы я остался на Emacs, который позволяет заменить собой часть инструментов.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Настоящие изменения</title><link href="https://kovchinnikov.info/" rel="alternate"></link><link href="https://kovchinnikov.info/feeds/all.atom.xml" rel="self"></link><id>https://kovchinnikov.info/</id><updated>2022-09-26T11:44:00+03:00</updated><subtitle>Страница Константина Овчинникова</subtitle><entry><title>Второе пришествие emacs</title><link href="https://kovchinnikov.info/2022-06-emacs.html" rel="alternate"></link><published>2022-06-26T20:58:00+03:00</published><updated>2022-06-26T20:58:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-06-26:/2022-06-emacs.html</id><summary type="html">&lt;p&gt;Главное &amp;ndash; понять, зачем&lt;/p&gt;</summary><content type="html">&lt;p&gt;История продолжается с момента, когда я был полностью доволен связкой терминал + tmux + vim + vimwiki. В плюсах:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Быстро: максимально быстрое управление с клавиатуры&lt;/li&gt;
+&lt;li&gt;При редактировании markdown есть дополнительные удобства&lt;/li&gt;
+&lt;li&gt;Вроде как всё внутри терминала&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;По прошествии времени при этом выявились минусы:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Выглядит слишком аскетично, хотя вроде как это должно было помочь&lt;/li&gt;
+&lt;li&gt;Убогая работа со вставкой и редактированием ссылок&lt;/li&gt;
+&lt;li&gt;При росте объёма информации моя страничка превратилась в месиво, но это вопрос и ко мне&lt;/li&gt;
+&lt;li&gt;Переключение языков надоело, хотя у меня стоит переключение на CapsLock&lt;/li&gt;
+&lt;li&gt;Надоели разные сочетания клавиш для копирования текста в терминале и в остальном окружении&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Надо признать, что учёные, среди которых emacs достаточно популярен, знают толк в обработке &lt;strong&gt;больших&lt;/strong&gt; объёмов информации, поэтому в org-mode действительно это делать очень удобно. Но мне необходимо было время, чтобы с этим смириться. Точнее, смириться с тем, что нужно использовать что-то помимо Markdown. А рецепт обработки больших объёмов информации известен &amp;ndash; надо её разметить:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Тегами&lt;/li&gt;
+&lt;li&gt;TODO&lt;/li&gt;
+&lt;li&gt;Приоритетами&lt;/li&gt;
+&lt;li&gt;Датами: когда задача запланирована и когда надо сделать&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Собственно это то, что есть в emacs org-mode, и чего нет в vimwiki, да и в целом не во всякой wiki есть. Если вам не нравится emacs, org-mode поддерживается &lt;a href="https://logseq.com/"&gt;logseq&lt;/a&gt;. При этом управление всеми дополнительными штуками сделано через / &amp;ndash; достаточно его нажать, и появляется меню выбора. Меня же манил emacs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Как инструмент, в котором я могу делать больше задач, чем просто ведение своей wiki (например, делать этот сайт и программировать), при этом использовать все те же возможности и сочетания клавиш&lt;/li&gt;
+&lt;li&gt;Как challenge, ведь нужно осваивать что-то новое&lt;/li&gt;
+&lt;li&gt;Окончательно моё любопытство разожгло &lt;a href="https://www.youtube.com/watch?v=NCYwVbiV4fw"&gt;видео&lt;/a&gt;, в котором утверждалось, что vim намного более популярен&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Но до того, как заново связаться с emacs, я задумался о том, что же меня, собственно, смущало, и как это можно обойти:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Физиологичность сочетаний клавиш: как правило, я нажимал Ctrl / Alt и саму клавишу одной рукой; когда работаешь долго, это начинает напрягать; в итоге я понял, что как и рекомендовал Владимир Владимирович Шахиджанян, клавиши нужно нажимать разными руками, и это снимает часть проблемы с нажатием большого числа клавиш&lt;/li&gt;
+&lt;li&gt;Doom Emacs, в котором не понятно решительно всё; если сочетания клавиш не работало, я не мог понять, это я туплю или оно переопределено; туда же eval-mode, по крайней мере, для начала&lt;/li&gt;
+&lt;li&gt;Документация: она часто реально не отвечает на интересующие тебя вопросы; лично мою проблему на 90% решило &lt;a href="https://play.google.com/store/apps/details?id=com.zdivdev.ebook.emacs"&gt;приложение для Android&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Например, в документации обнаружилось, что достаточно нажать Meta (Alt) и число, чтобы повторить действие несколько раз. Меня раздражало C-u, потом число. Также очень советую почитать про базовые движения, копирование текста, работу с окнами и буферами, ну и dired.&lt;/p&gt;
+&lt;p&gt;Также хочу порекомендовать несколько каналов, которые сильно помогли разобраться не только с кучей вопросов, но и с самим подходом к освоению emacs &amp;ndash; по возможности, будут давать ссылки прямо на плей-листы про emacs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/playlist?list=PL5--8gKSku15uYCnmxWPO17Dq6hVabAB4"&gt;DistroTube&lt;/a&gt; &amp;ndash; Дерек в целом красавчик, потому что он задаётся корневыми вопросами и честно отвечает на них; частично это связано с тем, что он профессиональный обучатор, и это заметно; кстати, он поддерживает замечательную &lt;a href="https://gitlab.com/dwt1/dotfiles"&gt;страничку на gitlab с примерами&lt;/a&gt;; именно Дерек объяснил, что emacs не нужно расценивать как текстовый редактор, это среда исполнения elisp-кода, которая позволяет его переписать и переопределить полностью, что никакому редактору и IDE не снилось&lt;/li&gt;
+&lt;li&gt;System Crafters: например, &lt;a href="https://www.youtube.com/playlist?list=PLEoMzSkcN8oPZvSdewHG8uApD7THlLLCV"&gt;Emacs Essentials&lt;/a&gt; и &lt;a href="https://www.youtube.com/playlist?list=PLEoMzSkcN8oPH1au7H6B7bBJ4ZO7BXjSZ"&gt;Emacs From Scratch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/playlist?list=PL8Bwba5vnQK14z96Gil86pLMDO2GnOhQ6"&gt;Prot&lt;/a&gt;: научная подготовка даёт себя знать, поэтому видео очень (иногда излишне) подробные&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/playlist?list=PLknodeJt-I5GJmcd7ENakYf_M0x9q50d1"&gt;Gavin Freeborn&lt;/a&gt;: это разработчик, у него достаточно специфичные задачи, зато он подробно рассказывает про переход с vim на emacs&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=JWD1Fpdd4Pc&amp;amp;t=27s"&gt;Выступление про org-mode&lt;/a&gt; &amp;ndash; вроде ничего особенного, но тоже познавательно и многое говорит о сути emacs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Что же мне было необходимо от emacs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Простота настройки; писать об этом особенно смешно после ссылки на плейлист Emacs From Scratch продолжительностью 12 часов&lt;/li&gt;
+&lt;li&gt;Org-mode для управления задачами; если мне нужен Markdown &amp;ndash; я буду писать в Markdown; если мне нужен LaTeX &amp;ndash; я буду писать в LaTeX; также я не стал бы писать в org-mode dotfiles, код сайта или код программы&lt;/li&gt;
+&lt;li&gt;Частичная замена нескольких приложений: терминал, файловый менеджер&lt;/li&gt;
+&lt;li&gt;Комфортная рабочая среда с едиными сочетаниями клавиш внутри всего, что происходит в emacs&lt;/li&gt;
+&lt;li&gt;Markdown mode для блога; это тоже забавно, потому что Markdown устроен именно так, чтобы свести разметку к минимуму&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Подход был настраивать с нуля, чтобы я точно понимал, что происходит. Из дополнений ставить только то, что мне необходимо. Начнём с облагораживания архаичного внешнего вида &amp;ndash; кстати, горячо рекомендую шрифты &lt;a href="https://github.com/adobe-fonts/source-code-pro"&gt;Source Code Pro&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(scroll-bar-mode -1) ;; отключаем полосу прокрутки
+(setq inhibit-startup-screen t) ;; отключаем заставку
+(setq dired-listing-switches &amp;quot;-laGh1v&amp;quot;) ;; включаем более приятный вид dired
+(setq-default word-wrap t) ;; включаем перенос слов
+(custom-set-faces
+ &amp;#39;(default ((t (:family &amp;quot;Source Code Pro&amp;quot; :foundry &amp;quot;ADBO&amp;quot; :slant normal :weight normal :height 173 :width normal))))) ;; шрифт
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Шрифт можно выбрать в меню &lt;code&gt;Options&lt;/code&gt; (&lt;code&gt;Set Default Font&lt;/code&gt;, потом нажать &lt;code&gt;Save Options&lt;/code&gt;. Если вы уже скрыли меню, ничего страшного, жмите &lt;code&gt;F10&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Ставим тему, я предпочитаю тёмную &lt;a href="https://github.com/oneKelvinSmith/monokai-emacs"&gt;Monokai&lt;/a&gt;; кстати, эта тема частично снимает мои предыдущие претензии к буйству цветов и расцветок в emacs:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;custom-theme-load-path &amp;quot;~/.emacs.d/themes/&amp;quot;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;load&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;theme&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;monokai t)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;После этого включаем нормальный каталог пакетов (кстати, чтобы применить изменения, можно нажать &lt;code&gt;M-x load-file RET init.rc&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(require &amp;#39;package)
+(add-to-list &amp;#39;package-archives &amp;#39;(&amp;quot;melpa&amp;quot; . &amp;quot;https://melpa.org/packages/&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Кстати, org-mode встроен в emacs, а вот &lt;a href="https://jblevins.org/projects/markdown-mode/"&gt;Markdown&lt;/a&gt; и &lt;a href="https://github.com/emacsmirror/reverse-im"&gt;reverse-im&lt;/a&gt; надо доустановить. Например, с помощью use-package, который можно поставить первым: &lt;code&gt;M-x package-install RET use-package&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Дальше идёт тюнинг, он у каждого свой. Например, я включил отображение недавнего списка файлов по C-x C-r:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(recentf-mode 1)
+(global-set-key (kbd &amp;quot;C-x C-r&amp;quot;) &amp;#39;recentf-open-files)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;И что мы получаем в итоге:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Выглядит неплохо, в том числе, плавно&lt;/li&gt;
+&lt;li&gt;Работа со ссылками с помощью функций, а не вручную: как в Markdown, так и в org-mode&lt;/li&gt;
+&lt;li&gt;Структуру задач буду пересматривать, но это не только к emacs вопрос&lt;/li&gt;
+&lt;li&gt;Сочетания клавиш работают, в большинстве случаев, в любой раскладке&lt;/li&gt;
+&lt;li&gt;Работа с буфером обмена устраивает больше&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Кстати об альтернативах org-mode: Markdown mode поддерживает чек-листы в двух состояниях, так что при желании можно было бы остаться и на Markdown. Но тянуло на приключения.&lt;/p&gt;
+&lt;p&gt;Ещё в плюсе &amp;ndash; возможность прямо в редакторе посмотреть документацию:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C-h m для текущего режима&lt;/li&gt;
+&lt;li&gt;C-h v для переменной&lt;/li&gt;
+&lt;li&gt;C-h f для функции&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Следите за обновлениями, не переключайтесь. Расскажу, на сколько меня хватило.&lt;/p&gt;</content><category term="blog"></category><category term="linux"></category><category term="продуктивность"></category></entry><entry><title>Рабочий процесс обычного человека и emacs'ера</title><link href="https://kovchinnikov.info/2022-06-linux-workflow.html" rel="alternate"></link><published>2022-06-20T22:59:00+03:00</published><updated>2022-06-20T22:59:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-06-20:/2022-06-linux-workflow.html</id><summary type="html">&lt;p&gt;Покоряем новые высоты продуктивности&lt;/p&gt;</summary><content type="html">&lt;p&gt;С одной стороны, хотел поделиться тем, как мне живётся на linux на работе: какие решения удалось найти и как выглядит рабочий процесс. С другой стороны, можно представить, как мог бы выглядеть процесс, если бы я остался на Emacs, который позволяет заменить собой часть инструментов.&lt;/p&gt;
 &lt;h3&gt;Рабочий процесс обычного человека&lt;/h3&gt;
 &lt;p&gt;С самого начала всё выглядит примерно так:&lt;/p&gt;
 &lt;ol&gt;
@@ -966,7 +1057,7 @@ bind 0 select 10
 &lt;li&gt;Переносить данные между облачными хранилищами с помощью rclone&lt;/li&gt;
 &lt;li&gt;Ну и конечно работать с установкой программ с помощью apt / dnf, rpm / dpkg, snap / flatpak&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Это только то, что использовал последнее время. В заключение этой части хочу заметить, что не всегда путь к этим конфигурациям был простым, поэтому помогало то, что я мог экспериментировать на домашнем компе, а потом закинуть конфиги на рабочий комп. Ведь конфиги &amp;ndash; это обычные текстовые файлы, при этом понятно, какие.&lt;/p&gt;</content><category term="blog"></category><category term="linux"></category></entry><entry><title>Linux на работе: проблемы и тюнинг</title><link href="https://kovchinnikov.info/2022-04-linux-2.html" rel="alternate"></link><published>2022-04-09T11:44:00+03:00</published><updated>2022-09-20T11:44:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-09:/2022-04-linux-2.html</id><summary type="html">&lt;p&gt;Полная перепись того, что не работает и что желательно донастроить&lt;/p&gt;</summary><content type="html">&lt;p&gt;В этой части расскажу о том, что не работает, и о том небольшом тюнинге, который крайне желательно сделать. Поскольку описывать не так уж много, приведу полные рецепты того, как всё сделать, хотя можно найти самому поиском. Речь пойдёт о следующем:&lt;/p&gt;
+&lt;p&gt;Это только то, что использовал последнее время. В заключение этой части хочу заметить, что не всегда путь к этим конфигурациям был простым, поэтому помогало то, что я мог экспериментировать на домашнем компе, а потом закинуть конфиги на рабочий комп. Ведь конфиги &amp;ndash; это обычные текстовые файлы, при этом понятно, какие.&lt;/p&gt;</content><category term="blog"></category><category term="linux"></category></entry><entry><title>Linux на работе: проблемы и тюнинг</title><link href="https://kovchinnikov.info/2022-04-linux-2.html" rel="alternate"></link><published>2022-04-09T11:44:00+03:00</published><updated>2022-09-26T11:44:00+03:00</updated><author><name>Константин Овчинников</name></author><id>tag:kovchinnikov.info,2022-04-09:/2022-04-linux-2.html</id><summary type="html">&lt;p&gt;Полная перепись того, что не работает и что желательно донастроить&lt;/p&gt;</summary><content type="html">&lt;p&gt;В этой части расскажу о том, что не работает, и о том небольшом тюнинге, который крайне желательно сделать. Поскольку описывать не так уж много, приведу полные рецепты того, как всё сделать, хотя можно найти самому поиском. Речь пойдёт о следующем:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Тачпад&lt;/li&gt;
 &lt;li&gt;Яркость экрана&lt;/li&gt;

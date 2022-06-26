@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/</loc>
-<lastmod>2022-06-20T23:41:35-00:00</lastmod>
+<lastmod>2022-06-26T22:40:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -13,6 +13,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://kovchinnikov.info/pages/main.html</loc>
 <lastmod>2021-07-09T21:48:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://kovchinnikov.info/2022-06-emacs.html</loc>
+<lastmod>2022-06-26T20:58:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -138,7 +145,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/2022-04-linux-2.html</loc>
-<lastmod>2022-09-20T11:44:00+03:00</lastmod>
+<lastmod>2022-09-26T11:44:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -789,21 +796,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/category/blog.html</loc>
-<lastmod>2022-09-20T11:44:00+02:30</lastmod>
+<lastmod>2022-09-26T11:44:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/tag/linux.html</loc>
-<lastmod>2022-09-20T11:44:00+02:30</lastmod>
+<lastmod>2022-09-26T11:44:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://kovchinnikov.info/tag/produktivnost.html</loc>
-<lastmod>2022-06-20T22:59:00+02:30</lastmod>
+<lastmod>2022-06-26T20:58:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1104,7 +1111,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://kovchinnikov.info/author/konstantin-ovchinnikov.html</loc>
-<lastmod>2022-09-20T11:44:00+02:30</lastmod>
+<lastmod>2022-09-26T11:44:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

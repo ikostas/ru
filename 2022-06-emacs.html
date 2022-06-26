@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru" itemscope itemtype="http://schema.org/Person">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>Второе пришествие emacs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Константин Овчинников">
+
+        <link rel="shortcut icon" href="/theme/images/logo3.ico">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Настоящие изменения">
+        <meta itemprop="image" content="/theme/images/logo3_small.png">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Настоящие изменения ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="ikostas2">
+        <meta name="twitter:image" content="">
+
+
+    <meta name="twitter:creator" content="ikostas2">
+    <meta name="twitter:url" content="./2022-06-emacs.html">
+    <meta name="twitter:title" content="Настоящие изменения ~ Второе пришествие emacs">
+    <meta name="twitter:description" content="Главное – понять, зачем">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Настоящие изменения ~ Второе пришествие emacs"/>
+    <meta property="og:description" content="Главное – понять, зачем"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <h1><a class="sitetitle" href=".">Настоящие изменения</a></h1>
+        <p>Страница Константина Овчинникова</p>
+		<p>
+        <a href="."><img alt="Home" id="avatar" src="/theme/images/logo3_small.png"></a>
+    <!-- Site search -->
+<script async src="https://cse.google.com/cse.js?cx=83e5897c79a72ea3d"></script>
+<div class="gcse-search"></div>
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+                <li><a class="nav__link" href="https://kovchinnikov.info">Блог</a></li>
+                <li><a class="nav__link" href="https://kovchinnikov.info/tags.html">Темы записей блога</a></li>
+
+                <li><a class="nav__link" href="./pages/main.html">Статьи и инструменты</a></li>
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/ikostas2" target="_blank"><img alt="Twitter"
+                        src="./theme/images/icons/twitter.png"></a>
+                <a href="https://facebook.com/bizrealchanges/" target="_blank"><img alt="Facebook"
+                        src="./theme/images/icons/facebook.png"></a>
+                <a href="https://www.linkedin.com/in/konstantinovchinnikov/" target="_blank"><img alt="LinkedIn"
+                        src="./theme/images/icons/linkedin.png"></a>
+                <a href="https://www.youtube.com/channel/UCSWV-jXlrnxIMbAD-82_USg" target="_blank"><img alt="YouTube"
+                        src="./theme/images/icons/youtube.png"></a>
+                <a href="https://news.google.com/publications/CAAqBwgKMNDclQsw0_6sAw?oc=3&ceid=RU:ru" target="_blank"><img alt="GoogleNews"
+                        src="./theme/images/icons/googlenews.png"></a>
+                <a href="https://github.com/ikostas/" target="_blank"><img alt="GitHub"
+                        src="./theme/images/icons/github.png"></a>
+            <a href="./feeds/all.atom.xml" rel="alternate">
+                <img alt="RSS" src="./theme/images/icons/rss.png"></a>
+    </p>
+
+
+
+</aside>
+
+<!-- Content -->
+<article>
+
+    <section id="content">
+        <article>
+<!--End mc_embed_signup-->
+
+            <h2 class="post_title post_detail"><a href="./2022-06-emacs.html" rel="bookmark" title="Permalink to Второе пришествие emacs">Второе пришествие emacs</a></h2>
+            <div class="entry-content blog-post">
+                <p>История продолжается с момента, когда я был полностью доволен связкой терминал + tmux + vim + vimwiki. В плюсах:</p>
+<ul>
+<li>Быстро: максимально быстрое управление с клавиатуры</li>
+<li>При редактировании markdown есть дополнительные удобства</li>
+<li>Вроде как всё внутри терминала</li>
+</ul>
+<p>По прошествии времени при этом выявились минусы:</p>
+<ul>
+<li>Выглядит слишком аскетично, хотя вроде как это должно было помочь</li>
+<li>Убогая работа со вставкой и редактированием ссылок</li>
+<li>При росте объёма информации моя страничка превратилась в месиво, но это вопрос и ко мне</li>
+<li>Переключение языков надоело, хотя у меня стоит переключение на CapsLock</li>
+<li>Надоели разные сочетания клавиш для копирования текста в терминале и в остальном окружении</li>
+</ul>
+<p>Надо признать, что учёные, среди которых emacs достаточно популярен, знают толк в обработке <strong>больших</strong> объёмов информации, поэтому в org-mode действительно это делать очень удобно. Но мне необходимо было время, чтобы с этим смириться. Точнее, смириться с тем, что нужно использовать что-то помимо Markdown. А рецепт обработки больших объёмов информации известен &ndash; надо её разметить:</p>
+<ul>
+<li>Тегами</li>
+<li>TODO</li>
+<li>Приоритетами</li>
+<li>Датами: когда задача запланирована и когда надо сделать</li>
+</ul>
+<p>Собственно это то, что есть в emacs org-mode, и чего нет в vimwiki, да и в целом не во всякой wiki есть. Если вам не нравится emacs, org-mode поддерживается <a href="https://logseq.com/">logseq</a>. При этом управление всеми дополнительными штуками сделано через / &ndash; достаточно его нажать, и появляется меню выбора. Меня же манил emacs:</p>
+<ul>
+<li>Как инструмент, в котором я могу делать больше задач, чем просто ведение своей wiki (например, делать этот сайт и программировать), при этом использовать все те же возможности и сочетания клавиш</li>
+<li>Как challenge, ведь нужно осваивать что-то новое</li>
+<li>Окончательно моё любопытство разожгло <a href="https://www.youtube.com/watch?v=NCYwVbiV4fw">видео</a>, в котором утверждалось, что vim намного более популярен</li>
+</ul>
+<p>Но до того, как заново связаться с emacs, я задумался о том, что же меня, собственно, смущало, и как это можно обойти:</p>
+<ul>
+<li>Физиологичность сочетаний клавиш: как правило, я нажимал Ctrl / Alt и саму клавишу одной рукой; когда работаешь долго, это начинает напрягать; в итоге я понял, что как и рекомендовал Владимир Владимирович Шахиджанян, клавиши нужно нажимать разными руками, и это снимает часть проблемы с нажатием большого числа клавиш</li>
+<li>Doom Emacs, в котором не понятно решительно всё; если сочетания клавиш не работало, я не мог понять, это я туплю или оно переопределено; туда же eval-mode, по крайней мере, для начала</li>
+<li>Документация: она часто реально не отвечает на интересующие тебя вопросы; лично мою проблему на 90% решило <a href="https://play.google.com/store/apps/details?id=com.zdivdev.ebook.emacs">приложение для Android</a></li>
+</ul>
+<p>Например, в документации обнаружилось, что достаточно нажать Meta (Alt) и число, чтобы повторить действие несколько раз. Меня раздражало C-u, потом число. Также очень советую почитать про базовые движения, копирование текста, работу с окнами и буферами, ну и dired.</p>
+<p>Также хочу порекомендовать несколько каналов, которые сильно помогли разобраться не только с кучей вопросов, но и с самим подходом к освоению emacs &ndash; по возможности, будут давать ссылки прямо на плей-листы про emacs:</p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PL5--8gKSku15uYCnmxWPO17Dq6hVabAB4">DistroTube</a> &ndash; Дерек в целом красавчик, потому что он задаётся корневыми вопросами и честно отвечает на них; частично это связано с тем, что он профессиональный обучатор, и это заметно; кстати, он поддерживает замечательную <a href="https://gitlab.com/dwt1/dotfiles">страничку на gitlab с примерами</a>; именно Дерек объяснил, что emacs не нужно расценивать как текстовый редактор, это среда исполнения elisp-кода, которая позволяет его переписать и переопределить полностью, что никакому редактору и IDE не снилось</li>
+<li>System Crafters: например, <a href="https://www.youtube.com/playlist?list=PLEoMzSkcN8oPZvSdewHG8uApD7THlLLCV">Emacs Essentials</a> и <a href="https://www.youtube.com/playlist?list=PLEoMzSkcN8oPH1au7H6B7bBJ4ZO7BXjSZ">Emacs From Scratch</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL8Bwba5vnQK14z96Gil86pLMDO2GnOhQ6">Prot</a>: научная подготовка даёт себя знать, поэтому видео очень (иногда излишне) подробные</li>
+<li><a href="https://www.youtube.com/playlist?list=PLknodeJt-I5GJmcd7ENakYf_M0x9q50d1">Gavin Freeborn</a>: это разработчик, у него достаточно специфичные задачи, зато он подробно рассказывает про переход с vim на emacs</li>
+<li><a href="https://www.youtube.com/watch?v=JWD1Fpdd4Pc&amp;t=27s">Выступление про org-mode</a> &ndash; вроде ничего особенного, но тоже познавательно и многое говорит о сути emacs</li>
+</ul>
+<p>Что же мне было необходимо от emacs:</p>
+<ul>
+<li>Простота настройки; писать об этом особенно смешно после ссылки на плейлист Emacs From Scratch продолжительностью 12 часов</li>
+<li>Org-mode для управления задачами; если мне нужен Markdown &ndash; я буду писать в Markdown; если мне нужен LaTeX &ndash; я буду писать в LaTeX; также я не стал бы писать в org-mode dotfiles, код сайта или код программы</li>
+<li>Частичная замена нескольких приложений: терминал, файловый менеджер</li>
+<li>Комфортная рабочая среда с едиными сочетаниями клавиш внутри всего, что происходит в emacs</li>
+<li>Markdown mode для блога; это тоже забавно, потому что Markdown устроен именно так, чтобы свести разметку к минимуму</li>
+</ul>
+<p>Подход был настраивать с нуля, чтобы я точно понимал, что происходит. Из дополнений ставить только то, что мне необходимо. Начнём с облагораживания архаичного внешнего вида &ndash; кстати, горячо рекомендую шрифты <a href="https://github.com/adobe-fonts/source-code-pro">Source Code Pro</a>:</p>
+<div class="highlight"><pre><span></span><code>(scroll-bar-mode -1) ;; отключаем полосу прокрутки
+(setq inhibit-startup-screen t) ;; отключаем заставку
+(setq dired-listing-switches &quot;-laGh1v&quot;) ;; включаем более приятный вид dired
+(setq-default word-wrap t) ;; включаем перенос слов
+(custom-set-faces
+ &#39;(default ((t (:family &quot;Source Code Pro&quot; :foundry &quot;ADBO&quot; :slant normal :weight normal :height 173 :width normal))))) ;; шрифт
+</code></pre></div>
+
+<p>Шрифт можно выбрать в меню <code>Options</code> (<code>Set Default Font</code>, потом нажать <code>Save Options</code>. Если вы уже скрыли меню, ничего страшного, жмите <code>F10</code>.</p>
+<p>Ставим тему, я предпочитаю тёмную <a href="https://github.com/oneKelvinSmith/monokai-emacs">Monokai</a>; кстати, эта тема частично снимает мои предыдущие претензии к буйству цветов и расцветок в emacs:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">add</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">list</span><span class="w"> </span><span class="s1">&#39;custom-theme-load-path &quot;~/.emacs.d/themes/&quot;)</span>
+<span class="p">(</span><span class="nb">load</span><span class="o">-</span><span class="n">theme</span><span class="w"> </span><span class="s1">&#39;monokai t)</span>
+</code></pre></div>
+
+<p>После этого включаем нормальный каталог пакетов (кстати, чтобы применить изменения, можно нажать <code>M-x load-file RET init.rc</code>):</p>
+<div class="highlight"><pre><span></span><code>(require &#39;package)
+(add-to-list &#39;package-archives &#39;(&quot;melpa&quot; . &quot;https://melpa.org/packages/&quot;))
+</code></pre></div>
+
+<p>Кстати, org-mode встроен в emacs, а вот <a href="https://jblevins.org/projects/markdown-mode/">Markdown</a> и <a href="https://github.com/emacsmirror/reverse-im">reverse-im</a> надо доустановить. Например, с помощью use-package, который можно поставить первым: <code>M-x package-install RET use-package</code></p>
+<p>Дальше идёт тюнинг, он у каждого свой. Например, я включил отображение недавнего списка файлов по C-x C-r:</p>
+<div class="highlight"><pre><span></span><code>(recentf-mode 1)
+(global-set-key (kbd &quot;C-x C-r&quot;) &#39;recentf-open-files)
+</code></pre></div>
+
+<p>И что мы получаем в итоге:</p>
+<ul>
+<li>Выглядит неплохо, в том числе, плавно</li>
+<li>Работа со ссылками с помощью функций, а не вручную: как в Markdown, так и в org-mode</li>
+<li>Структуру задач буду пересматривать, но это не только к emacs вопрос</li>
+<li>Сочетания клавиш работают, в большинстве случаев, в любой раскладке</li>
+<li>Работа с буфером обмена устраивает больше</li>
+</ul>
+<p>Кстати об альтернативах org-mode: Markdown mode поддерживает чек-листы в двух состояниях, так что при желании можно было бы остаться и на Markdown. Но тянуло на приключения.</p>
+<p>Ещё в плюсе &ndash; возможность прямо в редакторе посмотреть документацию:</p>
+<ul>
+<li>C-h m для текущего режима</li>
+<li>C-h v для переменной</li>
+<li>C-h f для функции</li>
+</ul>
+<p>Следите за обновлениями, не переключайтесь. Расскажу, на сколько меня хватило.</p>
+            </div>
+            <div class="post_list">
+                <a href="./author/konstantin-ovchinnikov.html">@Константин Овчинников</a> 
+                <span class="post_date">Вс 26 июня 2022</span>
+                <div><span>Теги: </span>
+                            <span><a href="./tag/linux.html">#linux </a></span>
+                            <span><a href="./tag/produktivnost.html">#продуктивность </a></span>
+                </div>
+            </div>
+                <div class="comments">
+                    <h2>Комментарии</h2>
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_identifier = "2022-06-emacs.html";
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'https://realchanges.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] ||
+                            document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+	  Создано с помощью <a href="http://getpelican.com/">Pelican</a>, 
+      тема <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> от <a href="https://parbhatpuri.com/">@parbhat</a>, иконки с <a href="https://icons8.com/">icon8</a>. РФ 12+.
+        </p>
+    </footer>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-44909202-3']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>
